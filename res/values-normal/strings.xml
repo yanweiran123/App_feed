@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">德蒙家园通</string>
+    <string name="user_name">用户名</string>
+    <string name="input_account">请填写登录账号</string>
+    <string name="pass">密 码</string>
+    <string name="input_pass">请填写密码</string>
+    <string name="reg">注册</string>
+    <string name="email">Email </string>
+</resources>

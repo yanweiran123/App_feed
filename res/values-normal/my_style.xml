@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="style1">
+        <item name="android:textColor">#fff</item>
+    </style>
+    <style name="style2">
+        <item name="android:textColor">#0f0f0f</item>
+    </style>
+    <style name="style_blue">
+        <item name="android:textColor">#0066cc</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="s_content">
+        <item name="android:textColor">#0f0f0f</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="six_choose">
+        <item name="android:textColor">#EEEEEE</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+    <style name="six_choose_small">
+        <item name="android:textColor">#D24F41</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+    <style name="teacher_name">
+        <item name="android:textColor">#D24F41</item>
+    </style>
+    <style name="indvidualcentettime">
+        <item name="android:textColor">#D24F41</item>
+        <item name="android:textSize">8sp</item>
+   </style>
+     <style name="afterlogin">
+         <item name="android:textColor">#D24F41</item>
+         <item name="android:textSize">30sp</item>
+     </style>
+    <style name="afterlogin_small">
+        <item name="android:textColor">#D24F41</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+</resources>

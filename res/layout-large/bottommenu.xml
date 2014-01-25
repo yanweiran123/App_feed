@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!-- 底部公共菜单-->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="#D24F41"
+        >
+        <Button
+            android:id="@+id/newsbutton"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="新鲜事"
+            />
+        <Button
+            android:id="@+id/messageboxbtn"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="消息箱"
+            />
+        <Button
+            android:id="@+id/relativecomment"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="相关评论"
+            />
+        <Button
+            android:id="@+id/indivcent"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="个人中心"
+            />
+    </LinearLayout>
+
+

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/afterlogin"
+    android:background="#E44839"
+    >
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="1"
+    android:layout_gravity="center"
+    android:layout_centerInParent="true"
+    >
+    <ImageView
+        />
+    <TableRow >
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="10pt"
+        android:text="@string/user_name"
+        android:layout_marginLeft="10px"
+        android:layout_weight="5"
+        />
+    <EditText
+        android:id="@+id/input_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/input_account"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:layout_marginRight="20px"
+        android:layout_weight="15"
+        />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pass"
+            android:textSize="10pt"
+            android:layout_marginLeft="10px"
+            android:layout_weight="5"
+
+            />
+        <EditText
+            android:id="@+id/input_ps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:selectAllOnFocus="true"
+            android:hint="@string/input_pass"
+            android:singleLine="true"
+            android:layout_marginRight="20px"
+            android:layout_weight="15"
+            />
+    </TableRow>
+    <TableRow android:paddingLeft="70px"
+              android:layout_marginBottom="20px"
+        >
+        <CheckBox
+            android:id="@+id/is_teacher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我是教师"
+            />
+    </TableRow>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <Button
+            android:id="@+id/reg"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/reg"
+            android:layout_weight="5"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            />
+        <Button
+            android:id="@+id/login"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="登录"
+            android:layout_weight="5"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/forget_ps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="忘记密码?"
+        android:layout_marginTop="30dip"
+        android:gravity="center_horizontal"
+        />
+    </TableLayout>
+  </LinearLayout>
+

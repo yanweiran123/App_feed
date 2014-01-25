@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="head_width">20dip</dimen>
+    <dimen name="head_height">30dip</dimen>
+    <dimen name="line_margin">5dip</dimen>
+    <dimen name="single_content_width">80dip</dimen>
+    <dimen name="single_content_marginLR">4dip</dimen>
+    <dimen name="single_content_marginUB">4dip</dimen>
+
+
+    <!--一周安排的单个内容 -->
+    <dimen name="arr_single">80dip</dimen>
+    <dimen name="weekarr_date">10dip</dimen>
+
+    <!--老师登录后 -->
+    <dimen name="title_fontSize">30sp</dimen>
+    <dimen name="selectclass_height">40dip</dimen>
+    <dimen name="classmargin">20dip</dimen>
+</resources>
