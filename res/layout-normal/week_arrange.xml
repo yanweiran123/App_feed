@@ -58,76 +58,18 @@
             />
     </RelativeLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_height="0px"
-            android:layout_weight="0.8"
-            >
-            <Button
-                android:id="@+id/mon_arr"
-                android:layout_width="0px"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:text="周一"
-                android:textColor="@color/red"
-                android:background="@color/grey1"
-                />
-            <Button
-                android:id="@+id/thur_arr"
-                android:layout_width="0px"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:text="周二"
-                android:background="@color/red"
-                android:textColor="@color/white"
-                />
-            <Button
-                android:id="@+id/tue_arr"
-                android:layout_width="0px"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:text="周三"
-                android:textColor="@color/red"
-                android:background="@color/grey1"
-                />
-            <Button
-                android:layout_width="0px"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:text="周四"
-                android:textColor="@color/red"
-                android:background="@color/grey1"
-                />
-            <Button
-                android:layout_width="0px"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:text="周五"
-                android:textColor="@color/red"
-                android:background="@color/grey1"
-                />
-        </LinearLayout>
-
-    <LinearLayout
+    <fragment
+        android:name="org.yanweiran.app.activity.WeekArrangeListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.8"
+        />
+    <FrameLayout
+        android:id="@+id/weekArrangeDetailContainer"
         android:layout_width="match_parent"
         android:layout_height="0px"
         android:layout_weight="10"
-        android:background="@color/white"
-        android:orientation="vertical"
-        >
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/arr_single"
-                >
-                <TextView
-                    android:id="@+id/wearr_order"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="1"
+        />
 
-                    />
-            </RelativeLayout>
-    </LinearLayout>
     <include layout="@layout/bottommenu" />
 </LinearLayout>

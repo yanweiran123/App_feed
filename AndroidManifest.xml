@@ -21,10 +21,12 @@
         <activity android:name="org.yanweiran.app.activity.Login"
                   android:label="@string/app_name"
             android:screenOrientation="portrait" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <!-- 注册页面-->
         <activity android:name="org.yanweiran.app.activity.Register"
@@ -37,27 +39,32 @@
                 android:label="家长应用"
             android:screenOrientation="portrait"
             >
-            </activity>
+        </activity>
         <!-- 家长登录后 -->
         <activity android:name="org.yanweiran.app.activity.AfterLogin_Student"
                    android:label="家长应用"
-                    android:screenOrientation="portrait"
-            >
+                    android:screenOrientation="portrait">
+
+
         </activity>
         <!--老师通知里的四个活动 -->
         <activity android:name="org.yanweiran.app.activity.TeacherNotice"
-                    android:label="家长应用"
-            android:screenOrientation="portrait"
-            >
+                    android:label="老师通知"
+            android:screenOrientation="portrait">
+
+
         </activity>
         <activity android:name="org.yanweiran.app.activity.IndividualCenter"
                     android:label="个人中心"
                     android:screenOrientation="portrait">
+
         </activity>
         <activity android:name="org.yanweiran.app.activity.RelativeComment"
                    android:label="相关评论"
                     android:screenOrientation="portrait"
             >
+
+
         </activity>
         <activity   android:name="org.yanweiran.app.activity.MessageBox"
                     android:label="消息箱"
@@ -66,8 +73,9 @@
         </activity>
 
         <activity android:name="org.yanweiran.app.activity.WeekArrange"
-                  android:screenOrientation="portrait"
-            />
+                  android:screenOrientation="portrait">
+
+            </activity>
         <activity android:name="org.yanweiran.app.activity.WeekRecipe"
                     android:screenOrientation="portrait"
             />
@@ -77,8 +85,25 @@
         <activity android:name="org.yanweiran.app.activity.ForgetPassword"
                     android:screenOrientation="portrait"
             />
+        <!--新鲜事 -->
         <activity android:name="org.yanweiran.app.activity.FreshNews"
-                android:screenOrientation="portrait"
-            />
+                android:screenOrientation="portrait">
+
+        </activity>
+
+        <!-- 注册结果-->
+        <activity android:name="org.yanweiran.app.activity.RegisterResult"
+                    android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name="org.yanweiran.app.activity.MessageSingle"
+                    android:screenOrientation="portrait">
+        </activity>
+        <!--班级照片 -->
+
+        <activity android:name="org.yanweiran.app.activity.PhotoList"
+                    android:screenOrientation="portrait">
+
+                    </activity>
     </application>
 </manifest>

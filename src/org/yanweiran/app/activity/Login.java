@@ -19,6 +19,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.yanweiran.Login.R;
 import org.yanweiran.app.HttpPackage.HttpUtil;
+import org.yanweiran.app.Singleton.SchoolClass;
 import org.yanweiran.app.Singleton.User;
 import org.yanweiran.app.clicklistener.TurnForgetPassword;
 import org.yanweiran.app.dialog.DialogUtil;
@@ -68,7 +69,7 @@ public class Login extends Activity
             @Override
             public void onClick(View v)
             {
-                if(1==1)
+                if(validate())
                 {
                     String  username = etUsername.getText().toString();
                     String  password = etPassword.getText().toString();
@@ -78,8 +79,8 @@ public class Login extends Activity
                     {
 //                        tag="1";
 //                        String parameters = "email="+username+"&pwd="+password+"&tag="+tag;
-//                        JSONDataUrl = JSONDataUrl+parameters;
-                        JSONDataUrl =  "http://115.28.46.167:83/app_feed/login.php?email=sunyibin&pwd=4184&tag=1";
+//                     JSONDataUrl = JSONDataUrl+parameters;
+                        JSONDataUrl =  "http://115.28.46.167:83/app_feed/login.php?email=sunyibin&pwd=123456&tag=1";
                         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,
                                 JSONDataUrl,null,new Response.Listener<JSONObject>() {
 
@@ -90,16 +91,16 @@ public class Login extends Activity
                                     int  i = jsonObject.getInt("succ");
                                     if(i==1)
                                     {
-
-                                        Intent intent = new Intent();
-                                        intent.setClass(Login.this,AfterLogin_Teacher.class);
-                                        startActivity(intent);
-                                        finish();
                                         User.getUser().bbname=jsonObject.getString("bbname");
                                         User.getUser().email=jsonObject.getString("email");
                                         User.getUser().teacherClass = jsonObject.getJSONArray("class");
                                         User.getUser().token = jsonObject.getString("token");
                                         User.getUser().tag = "1";
+                                        Intent intent = new Intent();
+                                        intent.setClass(Login.this,AfterLogin_Student.class);
+                                        startActivity(intent);
+                                        finish();
+
 
                                     }
                                     else
@@ -120,9 +121,10 @@ public class Login extends Activity
                     }
                     else
                     {
-                        tag="0";
+//                        tag="0";
                         String parameters = "email="+username+"&pwd="+password+"&tag="+tag;
                         JSONDataUrl = JSONDataUrl+parameters;
+        //                JSONDataUrl="http://115.28.46.167:83/app_feed/login.php?email=69&pwd=123456&tag=0";
                         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,
                                 JSONDataUrl,null,new Response.Listener<JSONObject>() {
                             @Override
@@ -133,10 +135,19 @@ public class Login extends Activity
                                     int  i = jsonObject.getInt("succ");
                                     if(i==1)
                                     {
+
+                                        User.getUser().bbname=jsonObject.getString("bbname");
+                                        User.getUser().email=jsonObject.getString("email");
+                                        User.getUser().token = jsonObject.getString("token");
+                                        User.getUser().tag = "0";
+                                        //SchoolClass.getSchoolClass().classId =jsonObject.getJSONArray("class").getJSONObject(0).getString("school_class_id");
+
+
                                         Intent intent = new Intent();
                                         intent.setClass(Login.this,AfterLogin_Student.class);
                                         startActivity(intent);
                                         finish();
+
                                     }
                                     else
                                     {

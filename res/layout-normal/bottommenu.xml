@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
     <!-- 底部公共菜单-->
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_height="0px"
         android:layout_weight="1"
         android:layout_width="match_parent"
@@ -8,35 +8,40 @@
         android:background="#D24F41"
         >
 
-
         <Button
             android:id="@+id/newsbutton"
-            android:layout_width="0px"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:text="新鲜事"
+            android:layout_width="70dip"
+            android:layout_height="50dip"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/btm_btn_normal"
+            android:drawableStart="@drawable/home"
             />
         <Button
             android:id="@+id/messageboxbtn"
-            android:layout_width="0px"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:text="消息箱"
+            android:layout_toRightOf="@id/newsbutton"
+            android:layout_width="70dip"
+            android:layout_height="50dip"
+            android:drawableStart="@drawable/message"
+            android:background="@drawable/btm_btn_normal"
+            android:layout_marginLeft="25dip"
             />
         <Button
             android:id="@+id/relativecomment"
-            android:layout_width="0px"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:text="相关评论"
+            android:layout_width="70dip"
+            android:layout_height="50dip"
+            android:layout_toRightOf="@+id/messageboxbtn"
+            android:drawableStart="@drawable/commenticon"
+            android:background="@drawable/btm_btn_change"
+            android:layout_marginLeft="25dip"
             />
         <Button
             android:id="@+id/indivcent"
-            android:layout_width="0px"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:text="个人中心"
+            android:layout_width="70dip"
+            android:layout_alignParentRight="true"
+            android:layout_height="50dip"
+            android:background="@drawable/btm_btn_normal"
+            android:drawableStart="@drawable/user"
             />
-    </LinearLayout>
+    </RelativeLayout>
 
 

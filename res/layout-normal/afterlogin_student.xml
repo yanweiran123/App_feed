@@ -9,74 +9,155 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="0dip"
-        android:layout_weight="0.4"
+        android:layout_weight="4"
         android:text="德蒙家园通"
         style="@style/afterlogin"
+        android:layout_gravity="center"
+        android:gravity="center"
         />
         <LinearLayout
             android:layout_height="0dip"
             android:layout_width="fill_parent"
             android:orientation="horizontal"
             android:layout_gravity="center"
-            android:layout_weight="1"
+            android:layout_weight="10"
+            android:showDividers="middle"
+            android:background="#EEEEEE"
             >
+            <View
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                />
                     <Button
                         android:id="@+id/rear_ass"
                         android:text="育儿助手"
-                        android:layout_height="fill_parent"
-                        android:layout_width="0dip"
-                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_width="150dip"
+
+                        android:textColor="@drawable/loged_text"
+                        android:background="@drawable/loged_btn"
+                        android:drawableTop="@drawable/news"
+
                         />
+            <View
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                />
                     <Button
                         android:id="@+id/teacher_notice"
-                        android:layout_height="fill_parent"
-                        android:layout_width="0dip"
-                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_width="150dip"
+                        android:drawableTop="@drawable/news"
                         android:text="老师通知"
+                        android:textColor="@drawable/loged_text"
+                        android:background="@drawable/loged_btn"
                         />
+            <View
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                />
 
         </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            />
         <LinearLayout
             android:layout_height="0dip"
             android:layout_width="fill_parent"
-            android:layout_weight="1"
+            android:layout_weight="10"
             android:layout_gravity="center"
             android:orientation="horizontal"
+            android:background="#EEEEEE"
             >
+            <View
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                />
                         <Button
                             android:id="@+id/week_recipe"
-                            android:layout_height="fill_parent"
-                            android:layout_width="0dip"
-                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:layout_width="150dip"
+                            android:drawableTop="@drawable/news"
                             android:text="一周食谱"
+                            android:textColor="@drawable/loged_text"
+                            android:background="@drawable/loged_btn"
                             />
+            <View
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                />
                         <Button
                             android:id="@+id/week_arrange"
-                            android:layout_height="fill_parent"
-                            android:layout_width="0dip"
-                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:layout_width="150dip"
+                            android:drawableTop="@drawable/news"
                             android:text="一周安排"
+                            android:textColor="@drawable/loged_text"
+                            android:background="@drawable/loged_btn"
                             />
+            <View
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                />
         </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            />
         <LinearLayout
             android:layout_height="0dip"
             android:layout_width="fill_parent"
-            android:layout_weight="1"
+            android:layout_weight="10"
             android:orientation="horizontal"
             >
+            <View
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                />
                     <Button
                         android:id="@+id/mess_box"
                         android:layout_height="fill_parent"
-                        android:layout_width="0dip"
-                        android:layout_weight="1"
+                        android:layout_width="150dip"
+                        android:drawableTop="@drawable/news"
                         android:text="消息盒子"
+                        android:gravity="center"
+
+                        android:background="@drawable/loged_btn"
+                        android:textColor="@drawable/loged_text"
                         />
+            <View
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                />
                     <Button
                         android:id="@+id/person_info"
                         android:layout_height="fill_parent"
-                        android:layout_width="0dip"
-                        android:layout_weight="1"
+                        android:layout_width="150dip"
                         android:text="个人资料"
+                        android:background="@drawable/loged_btn"
+                        android:textColor="@drawable/loged_text"
                         />
+            <View
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                />
         </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        />
+
 </LinearLayout>

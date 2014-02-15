@@ -8,6 +8,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import org.yanweiran.Login.R;
+import org.yanweiran.app.Singleton.User;
 import org.yanweiran.app.clicklistener.TurnToPersonData;
 import org.yanweiran.app.clicklistener.TurnWeekArrange;
 
@@ -31,6 +32,7 @@ public class AfterLogin_Student extends Activity {
         teacher_notice.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
+                User.getUser().tag="1";
                 Intent intent = new Intent();
                 intent.setClass(AfterLogin_Student.this,TeacherNotice.class);
                 startActivity(intent);

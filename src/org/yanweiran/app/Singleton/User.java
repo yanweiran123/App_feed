@@ -13,7 +13,9 @@ public class User {
     public String bbname;
     public String token;
     public JSONArray teacherClass;
+    public int msgNum;
     private volatile static User user;
+
 
 
 

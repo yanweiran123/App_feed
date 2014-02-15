@@ -3,9 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:stretchColumns="1,2"
-    android:layout_marginTop="80dip"
     android:layout_centerInParent="true"
     android:background="#E44839"
     >
@@ -17,11 +16,12 @@
                 android:textSize="20sp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="5dip"
+                android:textColor="@color/white"
             />
            <EditText
+               android:id="@+id/re_Email"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:hint="请输入邮箱"
                android:textSize="15dip"
                android:layout_marginLeft="10dip"
                android:layout_marginRight="10dip"
@@ -35,14 +35,17 @@
                 android:textSize="20dip"
                 android:layout_gravity="center"
                 android:layout_marginLeft="5dip"
+                android:textColor="@color/white"
                 />
             <EditText
+                android:id="@+id/password"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="@string/input_pass"
+                android:inputType="textPassword"
                 android:textSize="15dip"
                 android:layout_marginLeft="10dip"
                 android:layout_marginRight="10dip"
+
                 />
         </TableRow>
     <TableRow  android:layout_marginBottom="10dip">
@@ -53,14 +56,17 @@
             android:textSize="20dip"
             android:layout_gravity="center"
             android:layout_marginLeft="5dip"
+            android:textColor="@color/white"
             />
         <EditText
+            android:id="@+id/confirmPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="请再次输入密码"
-            android:textSize="15px"
+            android:inputType="textPassword"
+            android:textSize="15dip"
             android:layout_marginLeft="10dip"
             android:layout_marginRight="10dip"
+
             />
     </TableRow>
     <TableRow  android:layout_marginBottom="10dip">
@@ -71,14 +77,17 @@
             android:textSize="20sp"
             android:layout_gravity="center"
             android:layout_marginLeft="5dip"
+            android:textColor="@color/white"
             />
         <EditText
+            android:id="@+id/babyName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="请输入宝宝姓名"
+
             android:textSize="15sp"
             android:layout_marginLeft="10dip"
             android:layout_marginRight="10dip"
+
             />
     </TableRow>
     <TableRow>
@@ -91,8 +100,11 @@
         android:layout_height="match_parent"
         android:layout_width="match_parent">
     <Button
-        android:layout_width="wrap_content"
+        android:id="@+id/submit"
+        android:layout_width="100dip"
         android:layout_height="fill_parent"
+        android:background="@drawable/home_btn_change"
+        android:textColor="@drawable/home_text_change"
         android:text="@string/reg"
         />
     </LinearLayout>

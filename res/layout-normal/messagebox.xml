@@ -18,11 +18,10 @@
             android:text="消息箱"
             android:textColor="@color/white"
             android:layout_centerInParent="true"
-
             />
     </RelativeLayout>
-    <LinearLayout
-        android:id="@+id/messageContainer"
+    <ListView
+        android:id="@+id/msgContainer"
         android:layout_width="match_parent"
         android:layout_height="0px"
         android:layout_weight="10"
@@ -31,7 +30,6 @@
         android:paddingRight="10dip"
         android:paddingTop="15dip"
         >
-
-    </LinearLayout>
+    </ListView>
     <include layout="@layout/bottommenu"/>
 </LinearLayout>
