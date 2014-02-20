@@ -16,6 +16,8 @@
     <orderEntry type="library" name="pixate" level="project" />
     <orderEntry type="library" name="galhttprequest_1.0beta" level="project" />
     <orderEntry type="library" name="volley" level="project" />
+    <orderEntry type="library" name="android-support-v4" level="project" />
+    <orderEntry type="library" name="android-support-v13" level="project" />
   </component>
 </module>
 

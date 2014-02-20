@@ -58,6 +58,7 @@ public class  TeacherNotice extends Activity
                                     arrayClass = SchoolClass.getSchoolClass().messageArray;
                                     User.getUser().msgNum = arrayClass.length();
                                     int msgNum =arrayClass.length();
+                                    String[] msgId = new String[msgNum];
                                     String[] name=new String[msgNum];
                                     String[] time=new String[msgNum];
                                     String[] content=new String[msgNum];
@@ -70,6 +71,7 @@ public class  TeacherNotice extends Activity
 
                                     for(int i=0;i< msgNum;i++)
                                     {
+                                        msgId[i] = arrayClass.getJSONObject(i).getString("tid");
                                         name[i] = arrayClass.getJSONObject(i).getString("name");
                                         time[i] = arrayClass.getJSONObject(i).getString("time");
                                         content[i]=arrayClass.getJSONObject(i).getString("message");
@@ -82,7 +84,7 @@ public class  TeacherNotice extends Activity
                                     }
 
                                     //mHandler.sendMessage(msg);
-                                    NoticeAdapter mAdapter = new NoticeAdapter(msgNum,headImgUrl,name,time,content,sPhotoUrl_1,sPhotoUrl_2,sPhotoUrl_3,comment,appre,TeacherNotice.this);
+                                    NoticeAdapter mAdapter = new NoticeAdapter(msgId,msgNum,headImgUrl,name,time,content,sPhotoUrl_1,sPhotoUrl_2,sPhotoUrl_3,comment,appre,TeacherNotice.this);
                                     mListView.setAdapter(mAdapter);
                                 //  mListView.setSelection(mAdapter.getCount() - 1);
 
@@ -98,10 +100,10 @@ public class  TeacherNotice extends Activity
                 }
             });
              requestQueue.add(jsonObjectRequest);
+
+
              /*底部按钮的触发事件*/
             new BottomMenuListener().clickTurn(this);
-            //mListView.
-
 
         }
 

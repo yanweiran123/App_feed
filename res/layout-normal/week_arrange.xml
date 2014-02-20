@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0px"
@@ -39,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:text="左"
+            android:text="←"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -52,24 +53,68 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=">"
+            android:text="→"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             />
     </RelativeLayout>
-
-    <fragment
-        android:name="org.yanweiran.app.activity.WeekArrangeListFragment"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0px"
-        android:layout_weight="0.8"
-        />
-    <FrameLayout
-        android:id="@+id/weekArrangeDetailContainer"
-        android:layout_width="match_parent"
-        android:layout_height="0px"
-        android:layout_weight="10"
-        />
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:background="@color/grey1"
+        >
+        <TextView
+            android:id="@+id/mon"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:text="周一"
+            android:textColor="@color/red"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            />
+        <TextView
+            android:id="@+id/tue"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:text="周二"
+            android:textColor="@color/red"
+            android:layout_height="match_parent"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/wed"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:text="周三"
+            android:textColor="@color/red"
+            android:layout_height="match_parent"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/thurs"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:text="周四"
+            android:textColor="@color/red"
+            android:layout_height="match_parent"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/fri"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:text="周五"
+            android:textColor="@color/red"
+            android:layout_height="match_parent"
+            android:gravity="center"/>
+    </LinearLayout>
 
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vPager"
+            android:layout_height="0px"
+            android:layout_width="match_parent"
+            android:layout_weight="8"
+            android:flipInterval="30"
+            android:persistentDrawingCache="animation"
+            />
     <include layout="@layout/bottommenu" />
 </LinearLayout>

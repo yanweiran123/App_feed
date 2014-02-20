@@ -55,6 +55,7 @@ public class FreshNews extends Activity {
                             arrayClass = SchoolClass.getSchoolClass().messageArray;
                             User.getUser().msgNum = arrayClass.length();
                             int msgNum =arrayClass.length();
+                            String[] msgId = new String[msgNum];
                             String[] name=new String[msgNum];
                             String[] time=new String[msgNum];
                             String[] content=new String[msgNum];
@@ -68,6 +69,7 @@ public class FreshNews extends Activity {
                             for(int i=0;i< msgNum;i++)
                             {
                                 name[i] = arrayClass.getJSONObject(i).getString("name");
+                                msgId[i] = arrayClass.getJSONObject(i).getString("tid");
                                 time[i] = arrayClass.getJSONObject(i).getString("time");
                                 content[i]=arrayClass.getJSONObject(i).getString("message");
                                 headImgUrl[i] = arrayClass.getJSONObject(i).getString("headimg");
@@ -79,7 +81,7 @@ public class FreshNews extends Activity {
                             }
 
                             //mHandler.sendMessage(msg);
-                            NoticeAdapter mAdapter = new NoticeAdapter(msgNum,headImgUrl,name,time,content,sPhotoUrl_1,sPhotoUrl_2,sPhotoUrl_3,comment,appre,FreshNews.this);
+                            NoticeAdapter mAdapter = new NoticeAdapter(msgId,msgNum,headImgUrl,name,time,content,sPhotoUrl_1,sPhotoUrl_2,sPhotoUrl_3,comment,appre,FreshNews.this);
                             mListView.setAdapter(mAdapter);
                             //  mListView.setSelection(mAdapter.getCount() - 1);
                         }

@@ -1,22 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingLeft="10dip"
+    >
     <TextView
-        android:id="@+id/arrangeTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/tvOrder"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:text="1"
+        android:textSize="20dip"
+        android:background="@drawable/yellow_circle"
+        android:layout_centerVertical="true"
+        android:textColor="@color/white"
+        android:gravity="center"
         />
     <TextView
         android:id="@+id/arrangeTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="7:30"
+        android:layout_centerVertical="true"
+        android:textSize="20dip"
+        android:layout_toRightOf="@id/tvOrder"
+        android:background="@drawable/arrange_time"
+        android:layout_marginLeft="50dip"
+        android:textColor="@color/yellow"
         />
     <TextView
         android:id="@+id/arrangeContent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="?android:textAppearanceMedium"
+        android:text="好好做饭"
+        android:textColor="@color/black"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/arrangeTime"
+        android:layout_marginLeft="50dip"
         />
-</LinearLayout>
+</RelativeLayout>

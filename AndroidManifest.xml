@@ -22,10 +22,6 @@
                   android:label="@string/app_name"
             android:screenOrientation="portrait" >
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
         <!-- 注册页面-->
@@ -71,10 +67,13 @@
                     android:screenOrientation="portrait"
             >
         </activity>
-
+            <!-- 一周安排-->
         <activity android:name="org.yanweiran.app.activity.WeekArrange"
                   android:screenOrientation="portrait">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
             </activity>
         <activity android:name="org.yanweiran.app.activity.WeekRecipe"
                     android:screenOrientation="portrait"
@@ -103,7 +102,11 @@
 
         <activity android:name="org.yanweiran.app.activity.PhotoList"
                     android:screenOrientation="portrait">
-
                     </activity>
+
+        <!-- 新鲜事正文-->
+        <activity android:name="org.yanweiran.app.activity.FreshNewsOne"
+                    android:screenOrientation="portrait"
+            ></activity>
     </application>
 </manifest>

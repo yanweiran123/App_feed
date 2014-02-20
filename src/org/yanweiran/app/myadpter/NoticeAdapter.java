@@ -1,7 +1,9 @@
 package org.yanweiran.app.myadpter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
+import android.os.Bundle;
 import android.util.LruCache;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,11 +12,21 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageLoader;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.yanweiran.Login.R;
+import org.yanweiran.app.HttpPackage.HttpUtil;
+import org.yanweiran.app.Singleton.FreshOneEntity;
+import org.yanweiran.app.Singleton.User;
+import org.yanweiran.app.activity.FreshNewsOne;
 
 /**
  * Created by lenov on 14-2-1.
@@ -23,6 +35,7 @@ import org.yanweiran.Login.R;
 public   class NoticeAdapter extends BaseAdapter {
 
     private int num;
+    private String[] tid;
     private String nameString[];
     private  String sendTime[];
     private  String msgContent[];
@@ -35,9 +48,10 @@ public   class NoticeAdapter extends BaseAdapter {
     private Context context;
 
 
-    public  NoticeAdapter(int num,String[] headImgUrl,String[] nameString,String[] sendTime, String[] msgContent,String[] s_photo1,String[] s_photo2,String[] s_photo3,String[] comment,String[] appre,Context context)
+    public  NoticeAdapter(String[] tid,int num,String[] headImgUrl,String[] nameString,String[] sendTime, String[] msgContent,String[] s_photo1,String[] s_photo2,String[] s_photo3,String[] comment,String[] appre,Context context)
     {
         this.num=num;
+        this.tid=tid;
         this.headImgUrl=headImgUrl;
         this.nameString=nameString;
         this.sendTime=sendTime;
@@ -68,13 +82,14 @@ public   class NoticeAdapter extends BaseAdapter {
     public View getView(int position, View view, ViewGroup viewGroup)
 
     {
-        ViewHolder viewHolder = null;
+         ViewHolder  viewHolder = null;
         if (view == null) {
             LayoutInflater inflater = LayoutInflater.from(context);
-            view = inflater.inflate(R.layout.everynotice, null);
+            view = inflater.inflate(R.layout.teachernotice_single, null);
 
             viewHolder = new ViewHolder();
-            viewHolder.headImg=(ImageView)view.findViewById(R.id.noticeHead);
+
+           viewHolder.headImg=(RoundImageView)view.findViewById(R.id.noticeHead);
             viewHolder.tvUserName = (TextView)view.findViewById(R.id.noticeName);
             viewHolder.tvSendTime = (TextView)view.findViewById(R.id.noticeTime);
             viewHolder.tvContent = (TextView)view.findViewById(R.id.noticeContent);
@@ -87,22 +102,78 @@ public   class NoticeAdapter extends BaseAdapter {
         } else {
             viewHolder = (ViewHolder)view.getTag();
         }
+
         viewHolder.tvUserName.setText(nameString[position]);
         viewHolder.tvSendTime.setText(sendTime[position]);
         viewHolder.tvContent.setText(msgContent[position]);
-        loadImageByVolley2(viewHolder.sPhoto1,s_photo1[position]);
+        loadImageByVolley2(viewHolder.sPhoto1, s_photo1[position]);
         loadImageByVolley3(viewHolder.sPhoto2,s_photo2[position]);
         loadImageByVolley4(viewHolder.sPhoto3,s_photo3[position]);
-        loadImageByVolley(viewHolder.headImg,headImgUrl[position]);
+       loadImageByVolley(viewHolder.headImg,headImgUrl[position]);
         viewHolder.tvComment.setText(" 评论 "+comment[position]);
         viewHolder.tvAppre.setText(" 赞 "+appre[position]);
 
-        if(s_photo1[position]==null&s_photo2[position]==null&&s_photo3[position]==null)
-        {
-            viewHolder.sPhoto1.setVisibility(View.INVISIBLE);
-            viewHolder.sPhoto2.setVisibility(View.INVISIBLE);
-            viewHolder.sPhoto3.setVisibility(View.INVISIBLE);
-        }
+//        if(s_photo1[position]==null&s_photo2[position]==null&&s_photo3[position]==null)
+//        {
+//            viewHolder.sPhoto1.setVisibility(View.INVISIBLE);
+//            viewHolder.sPhoto2.setVisibility(View.INVISIBLE);
+//            viewHolder.sPhoto3.setVisibility(View.INVISIBLE);
+//        }
+
+
+          final   int i = position;
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                String jsonDataUrl = HttpUtil.BASE_URL + "feedone.php?"+"token="+ User.getUser().token+"&tid="+tid[i];
+
+                RequestQueue requestQueue = Volley.newRequestQueue(context);
+                JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,jsonDataUrl,null,new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject jsonObject) {
+                        try{
+
+                            FreshOneEntity msgEntity = new FreshOneEntity();
+                            JSONObject list = jsonObject.getJSONObject("lists");
+                            String headImgUrl = list.getString("headimg");
+
+                            Bundle data = new Bundle();
+                            msgEntity.setMsgContent(list.getString("message"));
+                            msgEntity.setCommNum(list.getString("reply_num") + " 评论");
+                            msgEntity.setMsgTime(list.getString("time"));
+                            msgEntity.setZanNum(list.getString("zan") + " 赞");
+                            msgEntity.setSendName(list.getString("name"));
+                            msgEntity.setHeadUrl(list.getString("headimg"));
+                            msgEntity.setMsgId(tid[i]);
+                            data.putSerializable("singleMsg",msgEntity);
+                            Intent intent = new Intent(context, FreshNewsOne.class);
+                            intent.putExtras(data);
+                            context.startActivity(intent);
+
+
+
+                        }
+                        catch (JSONException ex)
+                        {
+
+                        }
+
+                    }
+                },new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError volleyError) {
+
+                    }
+                });
+
+                requestQueue.add(jsonObjectRequest);
+
+
+            }
+        });
+
         return view;
     }
     final   class ViewHolder {
@@ -111,7 +182,9 @@ public   class NoticeAdapter extends BaseAdapter {
         public TextView tvContent;
         public TextView tvComment;
         public TextView tvAppre;
-        public ImageView headImg;
+
+       // public  ImageView headImg;
+        public  RoundImageView headImg;
         public ImageView sPhoto1;
         public  ImageView sPhoto2;
         public  ImageView sPhoto3;
