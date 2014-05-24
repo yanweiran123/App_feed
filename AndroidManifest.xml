@@ -1,29 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="org.yanweiran.Login"
-      android:versionCode="14"
-      android:versionName="4.1">
+      android:versionCode="18"
+      android:versionName="0.0.2">
     <supports-screens
+        android:resizeable="true"
         android:largeScreens="true"
         android:normalScreens="true"
         android:smallScreens="true"
         android:anyDensity="true"/>
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="17" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+        android:targetSdkVersion="18" />
 
-    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher"
-                android:theme="@android:style/Theme.NoTitleBar"
+    <!--权限-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- for log. -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_GPS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+
+
+
+    <application
+        android:theme="@android:style/Theme.Black.NoTitleBar"
+        android:allowBackup="true"
+        android:label="德蒙家园通"
+        android:icon="@drawable/ic_launcher"
+        android:persistent="true"
+        android:hardwareAccelerated="true"
+        android:name="org.yanweiran.app.activity.DemoApplication"
         >
 
 
-        <activity android:name="org.yanweiran.app.activity.Login"
-                  android:label="@string/app_name"
-            android:screenOrientation="portrait" >
+        <!--友盟更新推送 -->
+        <service
+            android:name="com.umeng.common.net.DownloadingService"
+            android:process=":DownloadingService" >
+        </service>
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
 
+
+
+
+        <!-- push富媒体，不使用富媒体推送不需要 -->
+        <activity
+            android:name="com.baidu.android.pushservice.richmedia.MediaViewActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="MediaViewActivity" >
+        </activity>
+        <activity
+            android:name="com.baidu.android.pushservice.richmedia.MediaListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="MediaListActivity"
+            android:launchMode="singleTask" >
+        </activity>
+        <!-- push富媒体结束 -->
+
+        <!-- push应用定义消息receiver声明 -->
+        <receiver android:name="org.yanweiran.app.baidupushservice.MyPushMessageReceiver">
+            <intent-filter>
+                <!-- 接收push消息 -->
+                <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
+                <!-- 接收bind,unbind,fetch,delete等反馈消息 -->
+                <action android:name="com.baidu.android.pushservice.action.RECEIVE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.CLICK" />
+            </intent-filter>
+        </receiver>
+
+        <!-- push必须的receviver和service声明 -->
+        <receiver android:name="com.baidu.android.pushservice.PushServiceReceiver"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.SHOW" />
+                <action android:name="com.baidu.android.pushservice.action.media.CLICK" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.baidu.android.pushservice.RegistrationReceiver"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.METHOD" />
+                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.baidu.android.pushservice.PushService"
+            android:exported="true"
+            android:process=":bdservice_v1"  >
+            <intent-filter android:priority="1000">
+                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE"
+                    />
+
+            </intent-filter>
+        </service>
+        <!-- push结束 -->
+
+
+
+        <activity
+            android:name="org.yanweiran.app.activity.PushDemoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
 
         </activity>
+        <activity
+            android:name="org.yanweiran.app.activity.LoginActivity"
+            android:configChanges="orientation|keyboardHidden"
+             >
+        </activity>
+
+        <activity
+            android:name="org.yanweiran.app.activity.CustomActivity"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|keyboardHidden" >
+        </activity>
+
+
+        <activity android:name="org.yanweiran.app.activity.StartActivity"
+            android:screenOrientation="portrait"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="org.yanweiran.app.activity.Login"
+                  android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity android:name="org.yanweiran.app.activity.AwesomeActivity"
+            android:screenOrientation="portrait">
+
+            </activity>
         <!-- 注册页面-->
         <activity android:name="org.yanweiran.app.activity.Register"
                   android:label="欢迎来到注册页面"
@@ -31,16 +172,15 @@
         </activity>
         <!--教师登陆后 -->
         <activity
-                android:name="org.yanweiran.app.activity.AfterLogin_Teacher"
+                android:name="org.yanweiran.app.activity.TeacherSelecClass"
                 android:label="家长应用"
-            android:screenOrientation="portrait"
+                android:screenOrientation="portrait"
             >
         </activity>
         <!-- 家长登录后 -->
-        <activity android:name="org.yanweiran.app.activity.AfterLogin_Student"
+        <activity android:name="org.yanweiran.app.activity.Tile"
                    android:label="家长应用"
-                    android:screenOrientation="portrait">
-
+                   android:screenOrientation="portrait">
 
         </activity>
         <!--老师通知里的四个活动 -->
@@ -52,6 +192,7 @@
         </activity>
         <activity android:name="org.yanweiran.app.activity.IndividualCenter"
                     android:label="个人中心"
+            android:configChanges="orientation|keyboardHidden|screenSize"
                     android:screenOrientation="portrait">
 
         </activity>
@@ -60,8 +201,14 @@
                     android:screenOrientation="portrait"
             >
 
-
         </activity>
+        <activity android:name="org.yanweiran.app.activity.Comment"
+                    android:label="评论"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            >
+        </activity>
+
         <activity   android:name="org.yanweiran.app.activity.MessageBox"
                     android:label="消息箱"
                     android:screenOrientation="portrait"
@@ -70,22 +217,22 @@
             <!-- 一周安排-->
         <activity android:name="org.yanweiran.app.activity.WeekArrange"
                   android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
+
             </activity>
+        <!-- 一周食谱-->
         <activity android:name="org.yanweiran.app.activity.WeekRecipe"
                     android:screenOrientation="portrait"
-            />
-        <activity android:name="org.yanweiran.app.activity.EditText"
-                    android:screenOrientation="portrait"
-            />
+            >
+
+
+        </activity>
         <activity android:name="org.yanweiran.app.activity.ForgetPassword"
                     android:screenOrientation="portrait"
-            />
+            >
+            </activity>
         <!--新鲜事 -->
-        <activity android:name="org.yanweiran.app.activity.FreshNews"
+        <activity android:name="org.yanweiran.app.activity.Tweet"
                 android:screenOrientation="portrait">
 
         </activity>
@@ -95,18 +242,78 @@
                     android:screenOrientation="portrait">
         </activity>
 
-        <activity android:name="org.yanweiran.app.activity.MessageSingle"
-                    android:screenOrientation="portrait">
+        <activity android:name="org.yanweiran.app.activity.ChatPrivate"
+                    android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            >
+
         </activity>
         <!--班级照片 -->
 
-        <activity android:name="org.yanweiran.app.activity.PhotoList"
+        <activity android:name="org.yanweiran.app.activity.AlbumActivity"
                     android:screenOrientation="portrait">
                     </activity>
 
         <!-- 新鲜事正文-->
-        <activity android:name="org.yanweiran.app.activity.FreshNewsOne"
+        <activity android:name="org.yanweiran.app.activity.TweetDetail"
                     android:screenOrientation="portrait"
-            ></activity>
+            >
+        </activity>
+        <activity android:name="org.yanweiran.app.activity.Assit"
+                    android:screenOrientation="portrait"
+            >
+            </activity>
+        <activity android:name="org.yanweiran.app.activity.AssitDetail">
+
+        </activity>
+        <activity android:name="org.yanweiran.app.activity.PublicNews"
+                    android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustResize"
+            >
+
+        </activity>
+        <!--大图片-->
+        <activity android:name="org.yanweiran.app.activity.BigPhoto" >
+
+        </activity>
+        <activity android:name="org.yanweiran.app.activity.ModifyName"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            >
+
+        </activity>
+        <activity android:name="org.yanweiran.app.activity.Ill"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            >
+        </activity>
+        <activity android:name="org.yanweiran.app.activity.Tip"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            >
+        </activity>
+        <activity android:name="org.yanweiran.app.activity.ModifyHeadPhoto"
+                    android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+                    >
+                    </activity>
+        <activity android:name="org.yanweiran.app.activity.TweetNoticeSinglePhoto"
+                    android:screenOrientation="portrait">
+            </activity>
+        <activity android:name="org.yanweiran.app.activity.ChatBigPhoto"
+                    android:screenOrientation="portrait">
+         </activity>
+        <activity android:name="org.yanweiran.app.activity.EditPhoto"
+                    android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 在百度开发者中心查询应用的API Key -->
+        <meta-data android:name="api_key" android:value="islQVWlQQcG7BXUYCO5NDiLu" />
+        <meta-data android:value="52a9300a56240b902a0cf707" android:name="UMENG_APPKEY"/>
+        <meta-data android:value="Channel ID" android:name="UMENG_CHANNEL"/>
+        <meta-data android:name="TD_APP_ID" android:value="D760728A17EB77EBD3C1DD2CECF1CB7A"/>
+        <meta-data android:name="TD_CHANNEL_ID" android:value="Channel ID"/>
     </application>
 </manifest>

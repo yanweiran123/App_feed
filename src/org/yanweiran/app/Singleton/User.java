@@ -9,11 +9,19 @@ import org.json.JSONObject;
 public class User {
     public String username;
     public  String tag;
+    public int flag;
     public   String email;
     public String bbname;
     public String token;
     public JSONArray teacherClass;
+    public JSONObject jsonObject;
     public int msgNum;
+    public String headUrl;
+    public String school_num;
+    public int news=0;
+    public int notifi=0;
+    public  int IsRegister;
+    public  String tagname;
     private volatile static User user;
 
 

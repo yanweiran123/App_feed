@@ -13,7 +13,7 @@ public class DialogUtil {
     public static void showDialog(Context source,String message)
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(source)
-                .setTitle("家长应用")
+                .setTitle("德蒙家园通")
                 .setMessage(message);
         builder.setPositiveButton("确定",new DialogInterface.OnClickListener() {
             @Override

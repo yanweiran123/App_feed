@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:paddingTop="10dip"
+    >
+    <RelativeLayout
+        android:id="@+id/lineL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerInParent="true"
+            android:background="@color/grey1"
+            />
+        <TextView
+            android:id="@+id/tipsendTimeL"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="2013-10-12"
+            android:layout_centerInParent="true"
+            android:background="@color/white"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@+id/lineL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        >
+        <org.yanweiran.app.MyWidget.EmojiText
+            android:id="@+id/tipsendContentL"
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tip_get"
+            android:textSize="16sp"
+            android:layout_marginLeft="50dp"
+            android:textColor="@color/black"
+            android:maxWidth="250dip"
+            />
+        <ImageView
+            android:id="@+id/tipGetImg"
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tip_get"
+            android:textSize="16sp"
+            android:maxHeight="100dp"
+            android:scaleType="fitCenter"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="50dp"
+            android:layout_centerVertical="true"
+            android:maxWidth="70dip"
+            android:visibility="gone"
+            />
+        <org.yanweiran.app.MyWidget.RoundImageView
+            android:id="@+id/tiptalkHeadL"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:src="@drawable/indexicon"
+            imagecontrol:border_inside_color="#fff7f2e9"
+            imagecontrol:border_outside_color="#ffd5d1c8"
+            imagecontrol:border_thickness="1dip"
+            android:layout_alignParentLeft="true"
+            android:layout_alignBottom="@+id/tipsendContentL"
+            />
+        <ImageView
+            android:id="@+id/tg_t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/t"
+            android:layout_alignBottom="@+id/tiptalkHeadL"
+            android:layout_alignRight="@+id/tiptalkHeadL"
+            android:visibility="gone"
+            />
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

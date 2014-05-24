@@ -5,10 +5,4 @@
         android:shape="rectangle"
     >
         <corners android:radius="3dip"/>
-        <padding
-                android:left="5dip"
-                android:right="5dip"
-
-            />
-    <solid android:color="@color/red2" />
 </shape>

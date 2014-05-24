@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <org.yanweiran.app.MyWidget.AssitGridView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/indexicon"
+            />
+    </org.yanweiran.app.MyWidget.AssitGridView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true"
+        android:background="#88000000"
+        >
+            <Button
+                android:id="@+id/cam"
+                android:text="拍照"
+                android:textSize="20sp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/big_cam_button"
+                />
+
+            <Button
+                android:id="@+id/album"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/cam"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/big_cam_button"
+                android:text="相册"
+                />
+
+            <Button
+                android:id="@+id/savedImg"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:layout_below="@+id/album"
+                android:text="上传头像"
+                android:textSize="20sp"
+                android:textColor="@drawable/loged_text"
+                android:background="@drawable/big_cancel"
+                android:layout_alignLeft="@+id/album"
+
+                />
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/savedImg"
+                android:layout_alignBottom="@+id/savedImg"
+                android:textSize="20sp"
+                android:text="取消"
+                android:textColor="@drawable/loged_text"
+                android:gravity="center"
+                android:layout_marginTop="40dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/big_cancel"
+                />
+        </RelativeLayout>
+</RelativeLayout>

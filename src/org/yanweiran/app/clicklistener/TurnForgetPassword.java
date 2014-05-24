@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-import org.yanweiran.app.activity.EditText;
 import org.yanweiran.app.activity.ForgetPassword;
 
 /**

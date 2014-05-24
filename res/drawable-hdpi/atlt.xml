@@ -10,7 +10,6 @@
     <item android:bottom="1px">
         <shape>
             <solid android:color="#ffffff" />
-
             <padding android:bottom="10px"
                 android:left="10px"
                 android:right="10px"

@@ -16,4 +16,22 @@
     <dimen name="title_fontSize">30sp</dimen>
     <dimen name="selectclass_height">30dip</dimen>
     <dimen name="classmargin">20dip</dimen>
+    <dimen name="rbm_menu_width">200dp</dimen>
+
+    <dimen name="rbm_item_padding_topbottom">16dp</dimen>
+    <dimen name="rbm_item_padding_leftright">8dp</dimen>
+
+    <dimen name="rbm_item_image_height">24dp</dimen>
+    <dimen name="rbm_item_image_width">24dp</dimen>
+
+    <dimen name="rbm_item_text_size">16sp</dimen>
+    <dimen name="rbm_item_text_padding_left">10dp</dimen>
+    <dimen name="header_height">50dip</dimen>
+    <dimen name="header_button_height">50dip</dimen>
+    <dimen name="header_text_size">16sp</dimen>
+    <dimen name="header_title_text_size">22sp</dimen>
+    <dimen name="header_button_back_width">60dp</dimen>
+    <dimen name="header_tab_width">80dp</dimen>
+    <dimen name="header_tab_group_width">162dp</dimen>
+
 </resources>

@@ -16,8 +16,6 @@
         <shape android:shape="rectangle">
             <solid android:color="#E74B3C"/>
             <padding android:left="17dip"   />
-
         </shape>
-
     </item>
 </layer-list>

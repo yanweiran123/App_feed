@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 正常屏幕的布局文件-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    >
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back"
+        android:layout_marginLeft="8dip"
+        android:layout_marginTop="8dip"
+        />
+        <org.yanweiran.app.MyWidget.RoundImageView
+            android:id="@+id/headImg"
+            android:layout_width="70dip"
+            android:layout_height="70dip"
+            android:scaleType="centerCrop"
+            android:src="@drawable/indexicon"
+            imagecontrol:border_inside_color="#fff7f2e9"
+            imagecontrol:border_outside_color="#ffd5d1c8"
+            imagecontrol:border_thickness="1dip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dip" />
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="王欣的妈妈"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/headImg"
+            android:layout_marginTop="5dip"
+            android:textSize="16dip"
+            android:textColor="@color/white"
+            android:layout_marginBottom="15dip"
+            />
+            <GridView
+                android:id="@+id/gridView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:numColumns="2"
+                android:gravity="center_horizontal"
+                android:verticalSpacing="8dip"
+                android:columnWidth="150dip"
+                android:horizontalSpacing="8dip"
+                android:listSelector="@drawable/tile_button"
+                />
+
+
+</RelativeLayout>

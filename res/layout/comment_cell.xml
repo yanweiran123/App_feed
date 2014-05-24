@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res/org.yanweiran.Login"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   android:background="@color/white"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:paddingBottom="5dip"
+
+    >
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/msg_divider"
+        android:layout_alignParentTop="true"
+        />
+    <org.yanweiran.app.MyWidget.RoundImageView
+        android:id="@+id/commHead"
+        android:layout_height="40dip"
+        android:layout_width="40dip"
+        android:scaleType="centerCrop"
+        android:src="@drawable/indexicon"
+        android:layout_marginTop="8dip"
+        imagecontrol:border_inside_color="#fff7f2e9"
+        imagecontrol:border_outside_color="#ffd5d1c8"
+        imagecontrol:border_thickness="1dip"
+
+        />
+    <TextView
+        android:id="@+id/commName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="陈小狼老师"
+        android:layout_toRightOf="@+id/commHead"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="5dp"
+        />
+    <ImageView
+        android:id="@+id/tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/t"
+        android:layout_alignRight="@+id/commHead"
+        android:layout_alignBottom="@+id/commHead"
+        />
+    <org.yanweiran.app.MyWidget.EmojiText
+        android:id="@+id/commContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="你好，这样不应该对孩子"
+        android:layout_toRightOf="@+id/commHead"
+        android:layout_marginLeft="10dip"
+        android:textColor="@color/grey"
+        android:layout_below="@+id/commName"
+        />
+        <TextView
+            android:id="@+id/commTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/commContent"
+            android:text="13分钟前"
+            android:textSize="10dip"
+            android:textColor="@color/grey"
+            android:layout_toRightOf="@+id/commHead"
+            android:layout_marginLeft="10dip"
+            />
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    >
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_width="0px"
+        >
+        <ImageView
+            android:id="@+id/img01"
+            android:src="@drawable/add01"
+            android:layout_width="45dip"
+            android:layout_centerHorizontal="true"
+            android:layout_height="45dip" />
+        <TextView
+            android:text="拍摄"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img01"
+            android:textSize="20dip"
+            android:layout_marginTop="5dip"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/red"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:id="@+id/img02"
+            android:src="@drawable/add02"
+            android:layout_width="45dip"
+            android:layout_centerHorizontal="true"
+            android:layout_height="45dip" />
+        <TextView
+            android:text="照片"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img02"
+            android:textSize="20dip"
+            android:layout_marginTop="5dip"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/red"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ill_line"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_width="0px"
+        >
+        <ImageView
+            android:id="@+id/img03"
+            android:src="@drawable/add04"
+            android:layout_width="45dip"
+            android:layout_centerHorizontal="true"
+            android:layout_height="45dip" />
+        <TextView
+            android:text="请假"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img03"
+            android:textSize="20dip"
+            android:layout_marginTop="5dip"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/yellow"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/tip_line"
+        android:layout_weight="1"
+        android:layout_centerHorizontal="true"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:id="@+id/img04"
+            android:src="@drawable/add05"
+            android:layout_width="45dip"
+            android:layout_centerHorizontal="true"
+            android:layout_height="45dip" />
+        <TextView
+            android:text="提醒"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img04"
+            android:textSize="20dip"
+            android:layout_marginTop="5dip"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/tip_title_color"
+            />
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<org.yanweiran.app.MyWidget.AssitGridView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_launcher"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#88000000"
+        android:layout_alignParentBottom="true"
+        >
+        <ImageView
+            android:id="@+id/identify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/game_unplay"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            />
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:background="@color/trans"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:layout_toRightOf="@+id/identify"
+            android:layout_marginLeft="10dip"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="篮球游戏"
+            />
+    </RelativeLayout>
+
+</org.yanweiran.app.MyWidget.AssitGridView>

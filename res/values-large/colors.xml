@@ -6,8 +6,12 @@
     <color name="black">#0f0f0f</color>
     <color name="red">#D24F41</color>
     <color name="red2">#D14F41</color>
+    <color name="title_color">#E74B3C</color>
     <color name="white">#fff</color>
     <color name="yellow">#FFBB34</color>
-
-
+    <color name="utrans">#60EEEEEE</color>
+    <color name="trans">#00EEEEEE</color>
+    <color name="blue">#33B5E5</color>
+    <color name="green">#99CC00</color>
+    <color name="orange">#FFBB33</color>
 </resources>

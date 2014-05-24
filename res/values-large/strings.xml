@@ -7,4 +7,14 @@
     <string name="input_pass">请填写密码</string>
     <string name="reg">注册</string>
     <string name="email">Email </string>
+    <string-array name="age">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
 </resources>

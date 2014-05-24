@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.tendcloud.tenddata.TCAgent;
+import com.umeng.analytics.MobclickAgent;
+
 import org.yanweiran.Login.R;
 import org.yanweiran.app.Singleton.RegisterPerson;
 
@@ -41,5 +44,21 @@ public class RegisterResult extends Activity {
 
             }
         });
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onPageStart("注册"); //统计页面
+        MobclickAgent.onResume(this);
+        TCAgent.onPageStart(this, "注册");
+        TCAgent.onResume(this);
+    }
+    @Override
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPageEnd("注册");
+        MobclickAgent.onPause(this);
+        TCAgent.onPageEnd(this,"注册");
+        TCAgent.onPause(this);
     }
 }

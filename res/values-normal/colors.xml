@@ -1,11 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="tweet_background">#e6e6e6</color>
     <color name="grey">#8f8f8f</color>
-    <color name="grey1">#E0E6E6</color>
+    <color name="comment_zan_line">#f5f5f5</color>
     <color name="grey2">#F6F4F5</color>
+    <color name="msg_divider">#d9d9d9</color>
     <color name="black">#0f0f0f</color>
-    <color name="red">#D24F41</color>
+    <color name="progress_bar_color">#990f0f0f</color>
+    <color name="red">#E74B3C</color>
     <color name="red2">#D14F41</color>
+    <color name="register_back">#B92D1F</color>
+    <color name="title_color">#E74B3C</color>
+    <color name="click_color">#FFCF4336</color>
     <color name="white">#fff</color>
     <color name="yellow">#FFBB34</color>
+    <color name="utrans">#60EEEEEE</color>
+    <color name="photo_item">#600f0f0f</color>
+    <color name="titie_btn_normal">#30ffffff</color>
+    <color name="assit_menu">#500f0f0f</color>
+    <color name="tile_back">#40D6DAE1</color>
+    <color name="trans">#00EEEEEE</color>
+    <color name="blue">#33B5E5</color>
+    <color name="green">#99CC00</color>
+    <color name="orange">#FFBB33</color>
+    <color name="m1color">#32B5E5</color>
+    <color name="m2color">#FFBB32</color>
+    <color name="m3color">#FF6665</color>
+    <color name="m4color">#CFA971</color>
+    <color name="m5color">#AA65CC</color>
+    <color name="m6color">#99CC00</color>
+    <color name="ill_title_color">#FFA034</color>
+    <color name="tip_title_color">#80B90D</color>
+    <color name="notice_btm_divider">#d9d9d9</color>
+    <color name="translucence">#ff4e4752</color>
 </resources>

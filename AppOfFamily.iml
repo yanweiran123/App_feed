@@ -18,6 +18,22 @@
     <orderEntry type="library" name="volley" level="project" />
     <orderEntry type="library" name="android-support-v4" level="project" />
     <orderEntry type="library" name="android-support-v13" level="project" />
+    <orderEntry type="library" name="universal-image-loader-1.8.4" level="project" />
+    <orderEntry type="library" name="httpmime-4.1.1" level="project" />
+    <orderEntry type="library" name="gson-2.2.4" level="project" />
+    <orderEntry type="library" name="gson-2.2.4-javadoc" level="project" />
+    <orderEntry type="library" name="gson-2.2.4-javadoc (2)" level="project" />
+    <orderEntry type="library" name="gson-2.2.4-sources" level="project" />
+    <orderEntry type="library" name="gson-2.2.4-javadoc (3)" level="project" />
+    <orderEntry type="library" name="gson-2.2.4-javadoc (4)" level="project" />
+    <orderEntry type="library" name="universal-image-loader-1.9.1" level="project" />
+    <orderEntry type="library" name="pushservice-2.4.0" level="project" />
+    <orderEntry type="library" name="umeng-sdk-analytics_v5.2.2" level="project" />
+    <orderEntry type="library" name="umeng-sdk-analytics_v5.2.2_update_v2.4.1" level="project" />
+    <orderEntry type="library" name="TalkingDataAnalytics" level="project" />
+    <orderEntry type="library" name="pushservice-3.2.0" level="project" />
+    <orderEntry type="library" name="pushservice-3.2.0 (2)" level="project" />
+    <orderEntry type="library" name="pushservice-4.0.0" level="project" />
   </component>
 </module>
 

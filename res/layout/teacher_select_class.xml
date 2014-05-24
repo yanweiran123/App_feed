@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/afterlogin"
+    android:background="@drawable/background"
+
+    >
+        <org.yanweiran.app.MyWidget.RoundImageView
+            android:id="@+id/headImg"
+            android:layout_width="70dip"
+            android:layout_height="70dip"
+            android:scaleType="centerCrop"
+            android:src="@drawable/indexicon"
+            imagecontrol:border_inside_color="#fff7f2e9"
+            imagecontrol:border_outside_color="#ffd5d1c8"
+            imagecontrol:border_thickness="1dip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dip"
+            />
+        <ImageView
+            android:id="@+id/tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/t"
+            android:layout_alignBottom="@+id/headImg"
+            android:layout_alignRight="@+id/headImg"
+            android:layout_alignEnd="@+id/headImg"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/tName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/headImg"
+            android:text="李苗苗老师"
+            android:layout_marginTop="10dip"
+            android:textSize="16sp"
+            android:textColor="@color/grey1"
+            />
+        <TextView
+            android:id="@+id/selectNote"
+            android:paddingLeft="20dip"
+            android:paddingTop="5dip"
+            android:paddingBottom="5dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tName"
+            android:layout_marginTop="20dip"
+            android:text="请选择要进入的班级:"
+            android:textSize="20dip"
+            android:textColor="@color/grey1"
+            android:background="#e0000000"
+            />
+    <ListView
+        android:id="@+id/listView"
+        android:layout_below="@+id/selectNote"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="1px"
+        android:divider="@color/white"
+        android:footerDividersEnabled="true"
+        android:listSelector="@drawable/class_select"
+
+    />
+
+</RelativeLayout>
