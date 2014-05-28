@@ -82,6 +82,7 @@ public class RecentTalkAdapter extends BaseAdapter {
             viewHolder.tvImageView = (ImageView)view.findViewById(R.id.msgHead);
             viewHolder.tag = (ImageView)view.findViewById(R.id.tag);
             viewHolder.readnote = (ImageView)view.findViewById(R.id.readnote);
+            viewHolder.readnote2 =(ImageView)view.findViewById(R.id.unread);
             view.setTag(viewHolder);
 
         }
@@ -95,8 +96,11 @@ public class RecentTalkAdapter extends BaseAdapter {
         }
         if(recentTalkEntity.getStatus()==1){
             viewHolder.readnote.setVisibility(View.VISIBLE);
+            viewHolder.readnote2.setVisibility(View.VISIBLE);
         }else {
             viewHolder.readnote.setVisibility(View.GONE);
+            viewHolder.readnote2.setVisibility(View.GONE);
+
         }
         viewHolder.tvName.setText(recentTalkEntity.getMsgName());
         viewHolder.tvTime.setText(recentTalkEntity.getMsgTime());
@@ -130,6 +134,7 @@ public class RecentTalkAdapter extends BaseAdapter {
         private ImageView   tvImageView;
         private ImageView tag;
         private ImageView readnote;
+        private ImageView readnote2;
 
     }
 

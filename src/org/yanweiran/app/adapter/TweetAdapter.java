@@ -1,32 +1,38 @@
 package org.yanweiran.app.adapter;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsListView;
 import android.widget.BaseAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.android.volley.RequestQueue;
-
-import com.android.volley.toolbox.Volley;
-
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.yanweiran.Login.R;
 import org.yanweiran.app.MyWidget.RoundImageView;
+import org.yanweiran.app.Singleton.BaseUrl;
 import org.yanweiran.app.Singleton.NoticeEntity;
 import org.yanweiran.app.Singleton.PublicType;
-import org.yanweiran.app.activity.TweetDetail;
+import org.yanweiran.app.Singleton.User;
 import org.yanweiran.app.activity.TweetNoticeSinglePhoto;
 ;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.assist.PauseOnScrollListener;
 
 import java.util.ArrayList;
 
@@ -80,7 +86,7 @@ public   class TweetAdapter extends BaseAdapter {
         final ViewHolder  viewHolder ;
         if (view == null) {
             LayoutInflater inflater = LayoutInflater.from(context);
-            view = inflater.inflate(R.layout.notice_cell, null);
+            view = inflater.inflate(R.layout.tweet_cell, null);
             viewHolder = new ViewHolder();
             viewHolder.tag = (ImageView)view.findViewById(R.id.tag);
             viewHolder.headImg=(RoundImageView)view.findViewById(R.id.noticeHead);
@@ -89,6 +95,7 @@ public   class TweetAdapter extends BaseAdapter {
             viewHolder.tvContent = (TextView)view.findViewById(R.id.noticeContent);
             viewHolder.tvComment =(TextView)view.findViewById(R.id.noticeComment);
             viewHolder.tvAppre =(TextView)view.findViewById(R.id.noticeAppre);
+            viewHolder.delete = (ImageButton)view.findViewById(R.id.delete);
             viewHolder.imgZan = (ImageView)view.findViewById(R.id.isZan);
             viewHolder.sPhoto1=(ImageView)view.findViewById(R.id.s_photo1);
             viewHolder.sPhoto2=(ImageView)view.findViewById(R.id.s_photo2);
@@ -188,8 +195,21 @@ public   class TweetAdapter extends BaseAdapter {
         }
         if(noticeEntity.getTag()==1){
             viewHolder.tag.setVisibility(View.VISIBLE);
+            viewHolder.tvUserName.setTextColor(context.getResources().getColor(R.color.red));
         }else {
             viewHolder.tag.setVisibility(View.GONE);
+            viewHolder.tvUserName.setTextColor(context.getResources().getColor(R.color.black));
+        }
+        if (noticeEntity.getIsmy()==1){
+            viewHolder.delete.setVisibility(View.VISIBLE);
+            viewHolder.delete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                            delet(position);
+                }
+            });
+        }else {
+            viewHolder.delete.setVisibility(View.GONE);
         }
         return view;
     }
@@ -201,11 +221,63 @@ public   class TweetAdapter extends BaseAdapter {
         public TextView tvAppre;
         public ImageView imgZan;
         public ImageView tag;
+        public ImageButton delete;
         public  RoundImageView headImg;
         public ImageView sPhoto1;
         public  ImageView sPhoto2;
         public  ImageView sPhoto3;
         public  int IMG_NUM;
+    }
+
+    public void  delet(final int position){
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(context)
+                    .setTitle("德蒙家园通")
+                    .setMessage("是否删除此条新鲜事?");
+            builder.setPositiveButton("确定",new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                 deleteSend(position);
+                }
+            });
+            builder.setNegativeButton("取消",new DialogInterface.OnClickListener(){
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                }
+            });
+            builder.create().show();
+        }
+    public void   deleteSend(final int position){
+        RequestQueue requestQueue = Volley.newRequestQueue(context);
+        String jsonDataUrl = BaseUrl.BASE_URL+"delfeed.php?token="+ User.getUser().token+"&tid="+noticeArrayList.get(position).getTid();
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,jsonDataUrl,null
+        ,new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject jsonObject) {
+                    try{
+                        if(jsonObject.getInt("succ")==1){
+                            Toast.makeText(context.getApplicationContext(), "已删除",
+                                    Toast.LENGTH_SHORT).show();
+                            noticeArrayList.remove(position);
+                            notifyDataSetChanged();
+                        }else {
+                            Toast.makeText(context.getApplicationContext(), "删除失败",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }catch (JSONException ex){
+
+                    }
+            }
+        },new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+
+            }
+        });
+            requestQueue.add(jsonObjectRequest);
+    }
+
+
     }
 
 
@@ -215,4 +287,4 @@ public   class TweetAdapter extends BaseAdapter {
 
 
 
-}
+

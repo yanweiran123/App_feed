@@ -5,12 +5,11 @@
     xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
     android:background="@color/white"
-
     >
     <ImageView
         android:layout_width="6dp"
         android:layout_height="60dp"
-        android:src = "@color/blue"
+        android:src = "@color/yellow"
         android:layout_alignParentRight="true"
         android:id="@+id/readnote"
         />
@@ -63,7 +62,7 @@
         android:layout_toRightOf="@+id/msgHead"
         android:layout_above="@+id/msgLast"
         android:textSize="18sp"
-        android:gravity="center"
+        android:gravity="center_horizontal"
         />
     <TextView
         android:id="@+id/msgTime"
@@ -74,5 +73,14 @@
         android:layout_marginRight="5dp"
         android:layout_alignTop="@+id/msgHead"
         />
-
+    <ImageView
+        android:id="@+id/unread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/un_read"
+        android:layout_toRightOf="@+id/msgName"
+        android:layout_marginLeft="14dp"
+        android:layout_alignTop="@+id/msgHead"
+        android:visibility="gone"
+        />
 </RelativeLayout>

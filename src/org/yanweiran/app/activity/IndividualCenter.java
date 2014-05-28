@@ -2,7 +2,6 @@ package org.yanweiran.app.activity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -17,17 +16,15 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.baidu.android.pushservice.PushManager;
-import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.tendcloud.tenddata.TCAgent;
 import com.umeng.analytics.MobclickAgent;
 
 import org.yanweiran.Login.R;
 import org.yanweiran.app.MyWidget.RoundImageView;
 import org.yanweiran.app.Singleton.User;
+import org.yanweiran.app.baidupushservice.Utils;
 
 /**
  * Created by lenov on 13-12-28.
@@ -73,14 +70,8 @@ public class IndividualCenter extends Activity {
                 builder.setPositiveButton("确定",new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                SharedPreferences pref = IndividualCenter.this.getSharedPreferences(
-                                "TweetMemory", 0);
-                        pref.edit().clear().commit();
-                SharedPreferences pref1 = IndividualCenter.this.getSharedPreferences(
-                                "TeacherNoticeMemory", 0);
-               pref1.edit().clear().commit();
                         PushManager.stopWork(getApplicationContext());
-                        Utils.setBind(IndividualCenter.this,false);
+                        Utils.setBind(IndividualCenter.this, false);
                         SharedPreferences sf = PreferenceManager.getDefaultSharedPreferences(IndividualCenter.this);
                         SharedPreferences.Editor editor =sf.edit();
                         editor.putString("user_id","");
@@ -137,9 +128,9 @@ public class IndividualCenter extends Activity {
                 .showStubImage(defaultImageId)
                 .showImageForEmptyUri(defaultImageId)
                 .showImageOnFail(defaultImageId)
-                .cacheInMemory()
-                .cacheOnDisc()
-                .resetViewBeforeLoading()
+                .cacheInMemory(true)
+                .cacheOnDisc(true)
+                .resetViewBeforeLoading(true)
                 .build();
         imageLoader.displayImage(
                 User.getUser().headUrl,

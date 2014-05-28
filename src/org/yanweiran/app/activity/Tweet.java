@@ -226,7 +226,7 @@ public class Tweet extends Activity{
     }
     public void initData()
     {
-        pref = Tweet.this.getSharedPreferences("TweetMemory", 0);
+        pref = Tweet.this.getSharedPreferences("TweetMemory"+User.getUser().classid+User.getUser().email, 0);
         MAX_ID = pref.getString("TweetMaxId","").equals("")?"0":pref.getString("TweetMaxId","");
         MIN_ID = pref.getString("TweetMinId","").equals("")?"0":pref.getString("TweetMinId", "");
         if(MAX_ID.equals("0")){
@@ -263,6 +263,7 @@ public class Tweet extends Activity{
                                 noticeEntity.setAppre(arrayClass.getJSONObject(i).getString("zan"));
                                 noticeEntity.setIsZan(arrayClass.getJSONObject(i).getInt("iszan"));
                                 noticeEntity.setTag(arrayClass.getJSONObject(i).getInt("tag"));
+                                noticeEntity.setIsmy(arrayClass.getJSONObject(i).optInt("ismy",0));
                                 noticeEntity.setS_photo1(arrayClass.getJSONObject(i).getString("s_photo1"));
                                 noticeEntity.setS_photo2(arrayClass.getJSONObject(i).getString("s_photo2"));
                                 noticeEntity.setS_photo3(arrayClass.getJSONObject(i).getString("s_photo3"));
@@ -279,7 +280,7 @@ public class Tweet extends Activity{
                                 if(!noticeEntity.getS_photo3().equals("")){
                                     noticeEntity.setImgNum(3);
                                 }
-                                Log.e("@#$%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",noticeEntity.getImgNum()+"");
+
                                 noticeEntities.add(noticeEntity);
                             }
 
@@ -324,11 +325,11 @@ public class Tweet extends Activity{
 
                             if(jsonObject.getInt("status")==1)
                             {
+                                update.setVisibility(View.GONE);
                                 myHandler.sendEmptyMessage(LOAD_NEW_INFO);
-                                SharedPreferences pref = Tweet.this.getSharedPreferences("TweetMemory", 0);
-                                pref.edit().putString("TweetEntityList", jsonObject.toString()).commit();
-                                pref.edit().putString("TweetMaxId",jsonObject.getString("maxid")).commit();
                                 MAX_ID = jsonObject.getString("maxid");
+                                pref.edit().putString("TweetMaxId",jsonObject.getString("maxid")).commit();
+
                             }
                             SchoolClass.getSchoolClass().messageArray = jsonObject.getJSONArray("lists");
                             arrayClass = SchoolClass.getSchoolClass().messageArray;
@@ -346,6 +347,7 @@ public class Tweet extends Activity{
                                 noticeEntity.setAppre(arrayClass.getJSONObject(i-1).getString("zan"));
                                 noticeEntity.setIsZan(arrayClass.getJSONObject(i-1).getInt("iszan"));
                                 noticeEntity.setTag(arrayClass.getJSONObject(i-1).getInt("tag"));
+                                noticeEntity.setIsmy(arrayClass.getJSONObject(i-1).optInt("ismy",0));
                                 noticeEntity.setS_photo1(arrayClass.getJSONObject(i-1).getString("s_photo1"));
                                 noticeEntity.setS_photo2(arrayClass.getJSONObject(i-1).getString("s_photo2"));
                                 noticeEntity.setS_photo3(arrayClass.getJSONObject(i-1).getString("s_photo3"));
@@ -412,6 +414,7 @@ public class Tweet extends Activity{
                                 noticeEntity.setAppre(arrayClass.getJSONObject(i).getString("zan"));
                                 noticeEntity.setIsZan(arrayClass.getJSONObject(i).getInt("iszan"));
                                 noticeEntity.setTag(arrayClass.getJSONObject(i).getInt("tag"));
+                                noticeEntity.setIsmy(arrayClass.getJSONObject(i).optInt("ismy",0));
                                 noticeEntity.setS_photo1(arrayClass.getJSONObject(i).getString("s_photo1"));
                                 noticeEntity.setS_photo2(arrayClass.getJSONObject(i).getString("s_photo2"));
                                 noticeEntity.setS_photo3(arrayClass.getJSONObject(i).getString("s_photo3"));

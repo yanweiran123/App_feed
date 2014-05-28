@@ -306,6 +306,7 @@ public class TweetDetail extends Activity {
                 num=num+1;
                 PublicType.getPublicType().TweetComm =Integer.toString(num);
                 comm.setText("评论"+num);
+                PublicType.getPublicType().TweetComm = Integer.toString(num);
                 msgEntity.setReplyNum(Integer.toString(num));
                 NoticeCommentEntity noticeCommentEntity= (NoticeCommentEntity)data.getSerializableExtra("comment");
                 noticeCommentEntities.add(0,noticeCommentEntity);

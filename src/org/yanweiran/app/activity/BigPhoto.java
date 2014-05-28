@@ -162,6 +162,7 @@ public class BigPhoto extends Activity {
     public void intiData(){
                             noticeEntity = new NoticeEntity();
                             noticeEntity.setName(photoListEntity.getName());
+                            noticeEntity.setTid(photoListEntity.getTid());
                             noticeEntity.setHeadImgUrl(photoListEntity.getHeadImgUrl());
                             noticeEntity.setMsgContent(photoListEntity.getContent());
                             noticeEntity.setAppre(photoListEntity.getZanNum());
@@ -174,6 +175,9 @@ public class BigPhoto extends Activity {
                             noticeEntity.setB_photo1(photoListEntity.getB_photo1());
                             noticeEntity.setB_photo2(photoListEntity.getB_photo2());
                             noticeEntity.setB_photo3(photoListEntity.getB_photo3());
+                            PublicType.getPublicType().TweetComm = photoListEntity.getCommentNum();
+                            PublicType.getPublicType().TweetIsZan = photoListEntity.getIsZan();
+                            PublicType.getPublicType().TweetZan = photoListEntity.getZanNum();
                      }
 
     @Override
@@ -182,6 +186,7 @@ public class BigPhoto extends Activity {
             case TWEET_NOTICE_DETAIL:
                noticeEntity.setIsZan(PublicType.getPublicType().TweetIsZan);
                noticeEntity.setAppre(PublicType.getPublicType().TweetZan);
+               noticeEntity.setReplyNum(PublicType.getPublicType().TweetComm);
                break;
         }
     }

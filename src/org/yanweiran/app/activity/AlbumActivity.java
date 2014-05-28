@@ -161,6 +161,7 @@ public class AlbumActivity extends Activity {
                 PhotoListEntity photoListEntity = photoListEntities.get(POSITION);
                 photoListEntity.setIsZan(PublicType.getPublicType().TweetIsZan);
                 photoListEntity.setZanNum(PublicType.getPublicType().TweetZan);
+                photoListEntity.setCommentNum(PublicType.getPublicType().TweetComm);
                 mPhotoListAdapter.notifyDataSetChanged();
         }
     }

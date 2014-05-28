@@ -126,14 +126,6 @@
         <!-- push结束 -->
 
 
-
-        <activity
-            android:name="org.yanweiran.app.activity.PushDemoActivity"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:label="@string/app_name" >
-
-        </activity>
         <activity
             android:name="org.yanweiran.app.activity.LoginActivity"
             android:configChanges="orientation|keyboardHidden"

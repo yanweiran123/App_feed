@@ -17,13 +17,13 @@ public class User {
     public JSONObject jsonObject;
     public int msgNum;
     public String headUrl;
+    public String classid;
     public String school_num;
     public int news=0;
     public int notifi=0;
     public  int IsRegister;
     public  String tagname;
     private volatile static User user;
-
 
 
 

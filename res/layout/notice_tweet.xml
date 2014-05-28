@@ -134,6 +134,7 @@
                     android:cacheColorHint="#00000000"
                     android:drawSelectorOnTop="false"
                     android:listSelector="@color/trans"
+
                     />
             </LinearLayout>
 </LinearLayout>

@@ -4,7 +4,7 @@
     xmlns:imagecontrol="http://schemas.android.com/apk/res/org.yanweiran.Login"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content"
-   android:background="@color/white"
+    android:background="@color/white"
     android:paddingLeft="10dip"
     android:paddingRight="10dip"
     android:paddingBottom="5dip"
@@ -26,7 +26,6 @@
         imagecontrol:border_inside_color="#fff7f2e9"
         imagecontrol:border_outside_color="#ffd5d1c8"
         imagecontrol:border_thickness="1dip"
-
         />
     <TextView
         android:id="@+id/commName"
@@ -67,4 +66,13 @@
             android:layout_toRightOf="@+id/commHead"
             android:layout_marginLeft="10dip"
             />
+    <ImageButton
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/trans"
+        android:src="@drawable/delete"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        />
 </RelativeLayout>

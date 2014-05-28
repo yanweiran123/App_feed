@@ -5,11 +5,13 @@ import android.app.Notification;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -30,6 +32,8 @@ import com.android.volley.toolbox.Volley;
 import com.baidu.android.pushservice.CustomPushNotificationBuilder;
 import com.baidu.android.pushservice.PushConstants;
 import com.baidu.android.pushservice.PushManager;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.tendcloud.tenddata.TCAgent;
@@ -38,11 +42,14 @@ import com.umeng.analytics.MobclickAgent;
 import org.json.JSONObject;
 import org.yanweiran.Login.R;
 import org.yanweiran.app.Singleton.BaseUrl;
+import org.yanweiran.app.Singleton.NoticeEntity;
 import org.yanweiran.app.Singleton.User;
 import org.yanweiran.app.adapter.TileAdapter;
 import org.yanweiran.app.MyWidget.RoundImageView;
+import org.yanweiran.app.baidupushservice.Utils;
 
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -58,6 +65,10 @@ public class Tile extends Activity {
     int defaultImageId = R.drawable.indexicon;
     private ImageButton btn_back;
     List<String> tags ;
+    private ArrayList<NoticeEntity> noticeEntities1 = new ArrayList<NoticeEntity>();
+    private SharedPreferences pref;
+    private SharedPreferences pref1;
+    private Gson gson;
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
@@ -249,6 +260,7 @@ public class Tile extends Activity {
     {
         if(keyCode == keyEvent.KEYCODE_BACK)
         {
+            keepMaxStore();
             if (User.getUser().tag.equals("1")){
                Intent intent = new Intent();
                 intent.setClass(Tile.this,TeacherSelecClass.class);
@@ -339,6 +351,43 @@ public class Tile extends Activity {
         PushManager.setNotificationBuilder(this, 1, cBuilder);
     }
 
+    public void  keepMaxStore(){
+        pref = Tile.this.getSharedPreferences("TweetMemory"+User.getUser().classid+User.getUser().email, 0);
+        String MAX_ID = pref.getString("TweetMaxId","").equals("")?"0":pref.getString("TweetMaxId","");
+        if(!MAX_ID.equals("0")){
+        Gson gson = new Gson();
+        String json = pref.getString("TweetEntityList", "");
+        ArrayList<NoticeEntity> noticeEntities = gson.fromJson(json,new TypeToken<ArrayList<NoticeEntity>>(){}.getType());
+        Log.e("************************************************",noticeEntities.size()+"");
+        if(noticeEntities.size()>30){
+            for(int i=noticeEntities.size();i>30;i--){
+            noticeEntities.remove(i-1);
+            }
+        json =gson.toJson(noticeEntities);
+        pref.edit().putString("TweetMinID",noticeEntities.get(noticeEntities.size()-1).getTid()).commit();
+        pref.edit().putString("TweetEntityList", json).commit();
+        }
+         Log.e("************************************************",noticeEntities.size()+"");
+        }
+        pref1 = Tile.this.getSharedPreferences("TeacherNoticeMemory"+User.getUser().classid+User.getUser().email, 0);
+       String MAX_ID1 = pref1.getString("TNoticeMaxId","").equals("")?"0":pref.getString("TNoticeMinId","");
+        if(!MAX_ID1.equals("0")){
+
+        Gson gson1 = new Gson();
+        String json1 = pref1.getString("TNoticeEntityList", "");
+        noticeEntities1 = gson1.fromJson(json1,new TypeToken<ArrayList<NoticeEntity>>(){}.getType());
+            Log.e("************************************************",noticeEntities1.size()+"");
+        if(noticeEntities1.size()>30){
+        for(int i=noticeEntities1.size();i>30;i--){
+            noticeEntities1.remove(i-1);
+        }
+        Log.e("************************************************",noticeEntities1.size()+"");
+       json1 =gson1.toJson(noticeEntities1);
+        pref1.edit().putString("TNoticeMinId",noticeEntities1.get(noticeEntities1.size()-1).getTid()).commit();
+        pref1.edit().putString("TNoticeEntityList", json1).commit();
+        }
+        }
+    }
 
 }
 

@@ -12,6 +12,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
+import org.yanweiran.app.baidupushservice.Utils;
 
 /**
  * 登录百度账号初始化Channel的Activity
@@ -99,11 +100,7 @@ public class LoginActivity extends Activity {
                             "get access token success", Toast.LENGTH_SHORT)
                             .show();
 
-                    // ͨ登录
-                    Intent intent = new Intent(Utils.ACTION_LOGIN);
-                    intent.setClass(LoginActivity.this, PushDemoActivity.class);
-                    intent.putExtra(Utils.EXTRA_ACCESS_TOKEN, accessToken);
-                    startActivity(intent);
+
 
                     finish();
                 }

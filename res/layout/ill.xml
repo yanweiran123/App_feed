@@ -47,6 +47,7 @@
         android:layout_height="0dip"
         android:layout_weight="6"
         android:gravity="top"
+        android:hint="请描述孩子生的什么病，严重程度，大概需要请几天假..."
         />
     <RelativeLayout
         android:layout_width="match_parent"

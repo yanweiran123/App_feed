@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -41,8 +42,8 @@ public class RelativeCommentAdapter extends BaseAdapter {
                 .showStubImage(defaultImageId)
                 .showImageForEmptyUri(defaultImageId)
                 .showImageOnFail(defaultImageId)
-                .cacheInMemory()
-                .cacheOnDisc()
+                .cacheInMemory(true)
+                .cacheOnDisc(true)
                 .resetViewBeforeLoading()
                 .build();
     }
@@ -79,6 +80,7 @@ public class RelativeCommentAdapter extends BaseAdapter {
             viewHolder.tvCommContent = (TextView)view.findViewById(R.id.commContent);
             viewHolder.tvCommWhat = (TextView)view.findViewById(R.id.commWhat);
             viewHolder.tvHeadImg=(RoundImageView)view.findViewById(R.id.headImg);
+            viewHolder.tag = (ImageView)view.findViewById(R.id.tag);
             view.setTag(viewHolder);
         }
         else
@@ -93,6 +95,13 @@ public class RelativeCommentAdapter extends BaseAdapter {
         viewHolder.tvCommTime.setText(relativeCommentEntity.getTime());
         viewHolder.tvCommContent.setText(relativeCommentEntity.getCommContent());
         viewHolder.tvCommWhat.setText(relativeCommentEntity.getCommWhat());
+        if(relativeCommentEntity.getTag()==1){
+            viewHolder.tag.setVisibility(View.VISIBLE);
+            viewHolder.tvCommName.setTextColor(context.getResources().getColor(R.color.red));
+        }else {
+            viewHolder.tag.setVisibility(View.GONE);
+            viewHolder.tvCommName.setTextColor(context.getResources().getColor(R.color.black));
+        }
         return  view;
     }
 
@@ -103,6 +112,7 @@ public class RelativeCommentAdapter extends BaseAdapter {
         public TextView tvCommTime;
         public TextView tvCommContent;
         public TextView tvCommWhat;
+        public ImageView tag;
     }
 
 

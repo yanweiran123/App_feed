@@ -18,6 +18,7 @@ public class NoticeEntity implements Serializable {
     private String b_photo2;
     private String b_photo3;
     private  String headImgUrl;
+    private int ismy;
     private int isZan;
     private String replyNum;
     private  String appre;
@@ -84,6 +85,7 @@ public class NoticeEntity implements Serializable {
     public  void  setB_photo3(String b_photo3){
         this.b_photo3 = b_photo3;
     }
+    public  void setIsmy(int ismy){this.ismy = ismy;}
 
     public String getTid()
     {
@@ -144,5 +146,8 @@ public class NoticeEntity implements Serializable {
     }
     public  int getImgNum(){
         return  imgNum;
+    }
+    public int getIsmy(){
+        return  ismy;
     }
 }

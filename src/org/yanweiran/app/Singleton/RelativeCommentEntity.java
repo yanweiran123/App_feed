@@ -12,6 +12,7 @@ public class RelativeCommentEntity  {
     private String    commContent;
     private String    commWhat;
     private String    tid;
+    private  int tag;
 
     public void setTid(String tid){
         this.tid = tid;
@@ -28,6 +29,9 @@ public class RelativeCommentEntity  {
     {
         this.time = time;
     }
+    public void setTag(int tag){
+        this.tag=tag;
+    }
 
     public  void  setCommContent(String commContent)
     {
@@ -37,7 +41,6 @@ public class RelativeCommentEntity  {
     {
         this.commWhat= commWhat;
     }
-
     public String getTid(){
         return tid;
     }
@@ -61,4 +64,8 @@ public class RelativeCommentEntity  {
     {
         return  commWhat;
     }
+    public int getTag(){
+        return  tag;
+    }
+
 }

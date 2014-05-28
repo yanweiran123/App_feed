@@ -34,6 +34,7 @@ import org.json.JSONObject;
 import org.yanweiran.Login.R;
 import org.yanweiran.app.Singleton.ClassEntity;
 import org.yanweiran.app.Singleton.User;
+import org.yanweiran.app.baidupushservice.Utils;
 import org.yanweiran.app.dialog.DialogUtil;
 import org.yanweiran.app.adapter.ClassListviewAdapter;
 import org.yanweiran.app.MyWidget.RoundImageView;
@@ -133,6 +134,7 @@ public class TeacherSelecClass extends Activity {
                 User.getUser().news = classEntityList.get(i).getClassNew();
                 Bundle bundle = new Bundle();
                 bundle.putString("classid",Integer.toString(view.getId()));
+                User.getUser().classid = Integer.toString(view.getId());
                 Intent intent = new Intent();
                 intent.putExtras(bundle);
                 intent.setClass(TeacherSelecClass.this,Tile.class);

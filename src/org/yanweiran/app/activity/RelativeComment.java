@@ -102,6 +102,7 @@ public class RelativeComment extends Activity{
                         commentEntity.setCommContent(jsonArray.getJSONObject(i).getString("c"));
                         commentEntity.setCommWhat(jsonArray.getJSONObject(i).getString("rc"));
                         commentEntity.setImgUrl(jsonArray.getJSONObject(i).getString("headimg"));
+                        commentEntity.setTag(jsonArray.getJSONObject(i).getInt("tag"));
                         commentEntities.add(commentEntity);
                     }
                     RelativeCommentAdapter mAdapter = new RelativeCommentAdapter(commentEntities,RelativeComment.this,mImageLoader);

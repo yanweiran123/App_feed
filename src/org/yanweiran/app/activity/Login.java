@@ -230,6 +230,7 @@ public class Login extends Activity
                                         User.getUser().news =jsonObject.getInt("news");
                                         User.getUser().school_num = jsonObject.getString("xuehao");
                                         User.getUser().notifi = jsonObject.getInt("notifi");
+                                        User.getUser().classid =jsonObject.getJSONObject("class").getString("school_class_id");
                                         User.getUser().tagname = jsonObject.optString("tagname");
                                         User.getUser().IsRegister = 0;
                                         SharedPreferences.Editor sharedata = getSharedPreferences("data", 0).edit();

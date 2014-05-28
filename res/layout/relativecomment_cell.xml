@@ -2,6 +2,7 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res/org.yanweiran.Login"
     android:layout_height="match_parent"
     android:background="@drawable/relative_comment"
     android:paddingTop="8dip"
@@ -11,11 +12,23 @@
     >
         <org.yanweiran.app.MyWidget.RoundImageView
             android:id="@+id/headImg"
-            android:layout_width="30dip"
-            android:layout_height="30dip"
-            android:src="@drawable/head_photo"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:src="@drawable/indexicon"
             android:layout_marginLeft="5dip"
             android:layout_marginRight="5dip"
+            imagecontrol:border_inside_color="#fff7f2e9"
+            imagecontrol:border_outside_color="#ffd5d1c8"
+            imagecontrol:border_thickness="1dip"
+            />
+        <ImageView
+            android:id="@+id/tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/t"
+            android:layout_alignRight="@+id/headImg"
+            android:layout_alignBottom="@+id/headImg"
+            android:visibility="gone"
             />
         <TextView
             android:id="@+id/userName"
@@ -23,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="陈小狼老师"
-            android:textColor="@color/red"
+            android:textColor="@color/black"
             />
          <TextView
              android:layout_width="wrap_content"
@@ -38,14 +51,14 @@
             android:layout_height="wrap_content"
             android:text="13分钟前"
             android:textColor="@color/red"
-            android:layout_below="@+id/userName"
+            android:layout_alignBottom="@+id/headImg"
             android:layout_toRightOf="@+id/headImg"
             android:textSize="10dip"
             />
         <View
             android:layout_width="fill_parent"
             android:layout_height="1px"
-            android:layout_below="@id/commentTime"
+            android:layout_below="@id/headImg"
             android:background="@color/grey"
             android:layout_marginTop="5dip"
             />

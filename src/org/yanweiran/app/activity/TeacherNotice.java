@@ -186,6 +186,14 @@ public class  TeacherNotice extends Activity
                     case LOAD_MORE_SUCCESS:
                         moreProgressBar.setVisibility(View.GONE);
                         mAdapter.notifyDataSetChanged();
+//                        if(noticeEntities.size()>30){
+//                            for(int i=noticeEntities.size();i>30;i--){
+//                                noticeEntities.remove(i-1);
+//                            }
+//                            String json = gson.toJson(noticeEntities);
+//                            pref.edit().putString("TNoticeEntityList", json).commit();
+//                        }
+
                         mListView.setSelectionfoot();
                         break;
 
@@ -205,7 +213,7 @@ public class  TeacherNotice extends Activity
 
         public  void initData()
         {
-            pref = TeacherNotice.this.getSharedPreferences("TeacherNoticeMemory", 0);
+            pref = TeacherNotice.this.getSharedPreferences("TeacherNoticeMemory"+User.getUser().classid+User.getUser().email, 0);
             MAX_ID = pref.getString("TNoticeMaxId","").equals("")?"0":pref.getString("TNoticeMinId","");
             MIN_ID = pref.getString("TNoticeMinId","").equals("")?"0":pref.getString("TNoticeMinId", "");
             if(MAX_ID.equals("0")){
@@ -240,6 +248,7 @@ public class  TeacherNotice extends Activity
                                     noticeEntity.setAppre(arrayClass.getJSONObject(i).getString("zan"));
                                     noticeEntity.setIsZan(arrayClass.getJSONObject(i).getInt("iszan"));
                                     noticeEntity.setTag(arrayClass.getJSONObject(i).getInt("tag"));
+                                    noticeEntity.setIsmy(arrayClass.getJSONObject(i).optInt("ismy",0));
                                     noticeEntity.setS_photo1(arrayClass.getJSONObject(i).getString("s_photo1"));
                                     noticeEntity.setS_photo2(arrayClass.getJSONObject(i).getString("s_photo2"));
                                     noticeEntity.setS_photo3(arrayClass.getJSONObject(i).getString("s_photo3"));
@@ -307,8 +316,9 @@ public class  TeacherNotice extends Activity
                                 if(jsonObject.getInt("status")==1)
                                 {
                                     update.setVisibility(View.GONE);
-                                    myHandler.sendEmptyMessage( LOAD_NEW_INFO);
+                                    myHandler.sendEmptyMessage(LOAD_NEW_INFO);
                                     MAX_ID = jsonObject.getString("maxid");
+                                    pref.edit().putString("TNoticeMaxId",jsonObject.getString("maxid")).commit();
                                 }
 
                                 SchoolClass.getSchoolClass().messageArray = jsonObject.getJSONArray("lists");
@@ -327,6 +337,7 @@ public class  TeacherNotice extends Activity
                                     noticeEntity.setAppre(arrayClass.getJSONObject(i-1).getString("zan"));
                                     noticeEntity.setIsZan(arrayClass.getJSONObject(i-1).getInt("iszan"));
                                     noticeEntity.setTag(arrayClass.getJSONObject(i-1).getInt("tag"));
+                                    noticeEntity.setIsmy(arrayClass.getJSONObject(i-1).optInt("ismy",0));
                                     noticeEntity.setS_photo1(arrayClass.getJSONObject(i-1).getString("s_photo1"));
                                     noticeEntity.setS_photo2(arrayClass.getJSONObject(i-1).getString("s_photo2"));
                                     noticeEntity.setS_photo3(arrayClass.getJSONObject(i-1).getString("s_photo3"));
@@ -390,6 +401,7 @@ public class  TeacherNotice extends Activity
                                     noticeEntity.setAppre(arrayClass.getJSONObject(i).getString("zan"));
                                     noticeEntity.setIsZan(arrayClass.getJSONObject(i).getInt("iszan"));
                                     noticeEntity.setTag(arrayClass.getJSONObject(i).getInt("tag"));
+                                    noticeEntity.setIsmy(arrayClass.getJSONObject(i).optInt("ismy",0));
                                     noticeEntity.setS_photo1(arrayClass.getJSONObject(i).getString("s_photo1"));
                                     noticeEntity.setS_photo2(arrayClass.getJSONObject(i).getString("s_photo2"));
                                     noticeEntity.setS_photo3(arrayClass.getJSONObject(i).getString("s_photo3"));

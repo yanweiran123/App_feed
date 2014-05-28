@@ -7,12 +7,8 @@ import java.util.List;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.yanweiran.app.Singleton.User;
-import org.yanweiran.app.activity.PushDemoActivity;
-import org.yanweiran.app.activity.StartActivity;
 import org.yanweiran.app.activity.Tile;
-import org.yanweiran.app.activity.Utils;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.text.TextUtils;

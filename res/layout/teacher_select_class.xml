@@ -64,7 +64,6 @@
         android:divider="@color/white"
         android:footerDividersEnabled="true"
         android:listSelector="@drawable/class_select"
-
     />
 
 </RelativeLayout>
