@@ -32,6 +32,7 @@ import org.json.JSONObject;
 import org.yanweiran.Login.R;
 import org.yanweiran.app.Singleton.BaseUrl;
 import org.yanweiran.app.Singleton.NoticeEntity;
+import org.yanweiran.app.Singleton.PublicType;
 import org.yanweiran.app.Singleton.RecentTalkEntity;
 import org.yanweiran.app.Singleton.RecipeEntity;
 import org.yanweiran.app.Singleton.User;
@@ -70,6 +71,10 @@ public class MessageBox extends Activity
                     //application = (MyApplication) this.getApplicationContext();
                     initView();
                     initData();
+                    User.getUser().news =0;
+            if(User.getUser().tag.equals("1")){
+                User.getUser().classEntityList.get(PublicType.getPublicType().classPosition).setClassNew(0);
+            }
         }
 
         public  void initView()
@@ -107,7 +112,7 @@ public class MessageBox extends Activity
                             {
                                 if(jsonObject.getInt("status")==1){
                                     dialog.dismiss();
-                                }
+
                                 JSONArray talkMessList = jsonObject.optJSONArray("talkmess");
                                 int num=talkMessList.length();
                                 for(int i=0;i<num;i++)
@@ -138,8 +143,13 @@ public class MessageBox extends Activity
                                 }
                                 RecentTalkAdapter mAdapter = new RecentTalkAdapter(recentTalkEntities,MessageBox.this,imageLoader);
                                 mListView.setAdapter(mAdapter);
-
                                 mListView.setOnItemClickListener(new RecentItemClickListener());
+                            }else {
+                                    Intent intent = new Intent();
+                                    intent.setClass(MessageBox.this,Login.class);
+                                    MessageBox.this.startActivity(intent);
+                                    MessageBox.this.finish();
+                                }
                             }
                             catch (JSONException ex)
                             {

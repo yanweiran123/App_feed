@@ -44,7 +44,6 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:background="@drawable/center_btn"
-
             />
    </RelativeLayout>
     <ScrollView
@@ -68,6 +67,7 @@
                 android:gravity="top"
                 android:background="@color/white"
                 android:paddingTop="3dp"
+                android:hint="照片长按可以删除"
              />
         <GridView
             android:id="@+id/gridViewImg"

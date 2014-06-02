@@ -8,7 +8,12 @@ public class ClassEntity  {
     private String className;
     private int classNew;
     private String classId;
+    private String tagName;
 
+
+    public void  setTagName(String tagName){
+        this.tagName = tagName;
+    }
     public void setClassName(String className)
         {
             this.className = className;
@@ -30,4 +35,7 @@ public class ClassEntity  {
         return classNew;
     }
     public String getClassId(){return classId;}
+    public  String getTagName(){
+        return  tagName;
+    }
 }

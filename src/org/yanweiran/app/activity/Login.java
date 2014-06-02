@@ -48,11 +48,13 @@ import com.tendcloud.tenddata.TCAgent;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.update.UmengUpdateAgent;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.yanweiran.Login.R;
 import org.yanweiran.app.MyWidget.RoundImageView;
 import org.yanweiran.app.Singleton.BaseUrl;
+import org.yanweiran.app.Singleton.ClassEntity;
 import org.yanweiran.app.Singleton.User;
 import org.yanweiran.app.clicklistener.TurnForgetPassword;
 import org.yanweiran.app.dialog.DialogUtil;
@@ -69,6 +71,7 @@ public class Login extends Activity
     private ImageLoader imageLoader;
     private DisplayImageOptions mDisplayImageOptions;
     int defaultImageId = R.drawable.indexicon;
+    static  int what = 0;
     private RoundImageView headImg;
     private Button login;
     static final String DEV_CENTER = "https://openapi.baidu.com/";
@@ -80,16 +83,16 @@ public class Login extends Activity
     public void onCreate(Bundle savedInstanceState)
     {
 
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.loging);
         UmengUpdateAgent.update(getApplicationContext());
-//        initImageLoader(getApplicationContext());
+
         imageLoader=ImageLoader.getInstance();
         mDisplayImageOptions = new DisplayImageOptions.Builder()
                 .showImageForEmptyUri(defaultImageId)
                 .showImageOnFail(defaultImageId)
                 .build();
+       mySwitch();
         initView();
         login();
     }
@@ -146,6 +149,7 @@ public class Login extends Activity
         * ===============================*/
         login.setOnClickListener(new OnClickListener()
         {
+
             @Override
             public void onClick(View v)
             {
@@ -168,10 +172,22 @@ public class Login extends Activity
                             public void onResponse(JSONObject jsonObject) {
                                 try
                                 {
+                                    if(what==1)
+                                    {
                                     int  i = jsonObject.getInt("succ");
                                     if(i==1)
                                     {
                                         User.getUser().jsonObject = jsonObject;
+                                        JSONArray jsonArray = jsonObject.getJSONArray("class");
+                                        for(int count=0;count<jsonArray.length();count++)
+                                        {
+                                            ClassEntity classEntity = new ClassEntity();
+                                            classEntity.setClassName(jsonArray.getJSONObject(count).getString("classname"));
+                                            classEntity.setClassNew(jsonArray.getJSONObject(count).getInt("news"));
+                                            classEntity.setTagName(jsonArray.getJSONObject(count).getString("tagname"));
+                                            classEntity.setClassId(jsonArray.getJSONObject(count).getString("school_class_id"));
+                                            User.getUser().classEntityList.add(classEntity);
+                                        }
                                         User.getUser().tag = "1";
                                         User.getUser().token = jsonObject.getString("token");
                                         User.getUser().bbname = jsonObject.getString("bbname");
@@ -194,7 +210,9 @@ public class Login extends Activity
                                     {
                                         DialogUtil.showDialog(Login.this, "用户名和密码不正确");
                                         dialog.dismiss();
-
+                                    }
+                                  }else {
+                                        Login.this.finish();
                                     }
                                 }
                                 catch (JSONException ex) {
@@ -219,6 +237,7 @@ public class Login extends Activity
                             public void onResponse(JSONObject jsonObject) {
                                 try
                                 {
+                                    if(what==1){
                                     int  i = jsonObject.getInt("succ");
                                     if(i==1)
                                     {
@@ -269,6 +288,9 @@ public class Login extends Activity
                                         DialogUtil.showDialog(Login.this, "用户名和密码不正确");
                                         dialog.dismiss();
                                     }
+                                    }else {
+                                        Login.this.finish();
+                                    }
                                 }
                                 catch (JSONException ex) {
                                     DialogUtil.showDialog(Login.this,ex.toString());
@@ -283,6 +305,9 @@ public class Login extends Activity
                     }
                 }
             }
+
+
+
         });
     }
     @Override
@@ -306,20 +331,7 @@ public class Login extends Activity
             }
             return true;
         }
-    public static void initImageLoader(Context context) {
-        File cacheDir = StorageUtils.getCacheDirectory(context,
-                true);
-        ImageLoaderConfiguration config = new ImageLoaderConfiguration
-                .Builder(context)
-                .threadPriority(Thread.NORM_PRIORITY - 2)
-                .threadPoolSize(5)
-                .discCacheFileNameGenerator(new Md5FileNameGenerator())
-                .tasksProcessingOrder(QueueProcessingType.LIFO)
-                .memoryCache(new UsingFreqLimitedMemoryCache(2000000)) // You can pass your own memory cache implementation
-                .discCache(new UnlimitedDiscCache(cacheDir))
-                .build();
-          ImageLoader.getInstance().init(config);
-    }
+
     @Override
     public void onResume() {
         super.onResume();
@@ -361,4 +373,28 @@ public class Login extends Activity
             return super.onKeyDown(keyCode, event);
         }
     }
+
+    public void   mySwitch(){
+
+        String jsonDataUrl = "http://app.rad-dev.net/test.php";
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,jsonDataUrl,null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject jsonObject) {
+                        try {
+                            what = jsonObject.getInt("test");
+                        }catch (JSONException ex){
+
+                        }
+                    }
+                },new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+
+            }
+        });
+        requestQueue.add(jsonObjectRequest);
+    }
+
 }

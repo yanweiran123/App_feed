@@ -33,6 +33,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.yanweiran.Login.R;
 import org.yanweiran.app.Singleton.ClassEntity;
+import org.yanweiran.app.Singleton.PublicType;
 import org.yanweiran.app.Singleton.User;
 import org.yanweiran.app.baidupushservice.Utils;
 import org.yanweiran.app.dialog.DialogUtil;
@@ -48,15 +49,11 @@ import java.util.List;
  * Created by lenov on 13-12-11.
  */
 public class TeacherSelecClass extends Activity {
-
-
-
-
         ListView mListView;
         RoundImageView headImg;
         TextView note;
         TextView tvName;
-        ArrayList<ClassEntity> classEntityList = new ArrayList<ClassEntity>();
+
     List<String> tags ;
     private ImageLoader imageLoader;
     private DisplayImageOptions mDisplayImageOptions;
@@ -76,34 +73,20 @@ public class TeacherSelecClass extends Activity {
         /**
          * 得到JSON数据
          * */
-         JSONObject jsonObject =User.getUser().jsonObject;
-            try
-            {
-                JSONArray jsonArray = jsonObject.getJSONArray("class");
-                tvName.setText(jsonObject.getString("bbname"));
-                for(int count=0;count<jsonArray.length();count++)
-                {
-                    ClassEntity classEntity = new ClassEntity();
-                    classEntity.setClassName(jsonArray.getJSONObject(count).getString("classname"));
-                    classEntity.setClassNew(jsonArray.getJSONObject(count).getInt("news"));
-                    classEntity.setClassId(jsonArray.getJSONObject(count).getString("school_class_id"));
-                    tags.add(jsonArray.getJSONObject(count).getString("tagname"));
-                    classEntityList.add(classEntity);
-                }
-                ClassListviewAdapter classListviewAdapter = new ClassListviewAdapter(classEntityList,TeacherSelecClass.this);
-                mListView.setAdapter(classListviewAdapter);
-                mListView.setOnItemClickListener(new ItemClickListener());
-                PushManager.setTags(getApplicationContext(), tags);
+        for(int count=0;count<User.getUser().classEntityList.size();count++)
+        {
+            tags.add(User.getUser().classEntityList.get(count).getTagName());
+        }
+        ClassListviewAdapter classListviewAdapter = new ClassListviewAdapter(User.getUser().classEntityList,TeacherSelecClass.this);
+        mListView.setAdapter(classListviewAdapter);
+        mListView.setOnItemClickListener(new ItemClickListener());
+        PushManager.setTags(getApplicationContext(), tags);
 
-            }
-            catch (JSONException ex)
-            {
-                    DialogUtil.showDialog(this,"您暂时没有班级，请到...创建班级");
-            }
+
+
         }
 
     public void initView(){
-
         final  ImageView tag = (ImageView)findViewById(R.id.tag);
         if(User.getUser().tag.equals("1")){
             tag.setVisibility(View.VISIBLE);
@@ -125,13 +108,16 @@ public class TeacherSelecClass extends Activity {
             }
         });
         tvName =(TextView)findViewById(R.id.tName);
+        tvName.setText(User.getUser().bbname);
     }
+
 
         public class ItemClickListener implements AdapterView.OnItemClickListener
         {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                User.getUser().news = classEntityList.get(i).getClassNew();
+                User.getUser().news = User.getUser().classEntityList.get(i).getClassNew();
+                PublicType.getPublicType().classPosition = i;
                 Bundle bundle = new Bundle();
                 bundle.putString("classid",Integer.toString(view.getId()));
                 User.getUser().classid = Integer.toString(view.getId());
@@ -141,7 +127,7 @@ public class TeacherSelecClass extends Activity {
                 TeacherSelecClass.this.startActivity(intent);
                 TeacherSelecClass.this.finish();
                 overridePendingTransition(R.anim.slide_right_in, R.anim.slide_left_out);
-                    }
+              }
         }
 
     @Override
@@ -195,33 +181,5 @@ public class TeacherSelecClass extends Activity {
         TCAgent.onPageEnd(this,"教师导航");
         TCAgent.onPause(this);
     }
-    public void pushMsg(){
-        Resources resource = this.getResources();
-        String pkgName = this.getPackageName();
-        if (!Utils.hasBind(getApplicationContext())) {
-            PushManager.startWork(getApplicationContext(),
-                    PushConstants.LOGIN_TYPE_API_KEY,
-                    Utils.getMetaValue(TeacherSelecClass.this, "api_key"));
-            PushConstants.startPushService(getApplicationContext());
-            // Push: 如果想基于地理位置推送，可以打开支持地理位置的推送的开关
-            // PushManager.enableLbs(getApplicationContext());
-        }
 
-        // Push: 设置自定义的通知样式，具体API介绍见用户手册，如果想使用系统默认的可以不加这段代码
-        // 请在通知推送界面中，高级设置->通知栏样式->自定义样式，选中并且填写值：1，
-        // 与下方代码中 PushManager.setNotificationBuilder(this, 1, cBuilder)中的第二个参数对应
-        CustomPushNotificationBuilder cBuilder = new CustomPushNotificationBuilder(
-                getApplicationContext(), resource.getIdentifier(
-                "notification_custom_builder", "layout", pkgName),
-                resource.getIdentifier("notification_icon", "id", pkgName),
-                resource.getIdentifier("notification_title", "id", pkgName),
-                resource.getIdentifier("notification_text", "id", pkgName));
-        cBuilder.setNotificationFlags(Notification.FLAG_AUTO_CANCEL);
-        cBuilder.setNotificationDefaults(Notification.DEFAULT_SOUND
-                | Notification.DEFAULT_VIBRATE);
-        cBuilder.setStatusbarIcon(this.getApplicationInfo().icon);
-        cBuilder.setLayoutDrawable(resource.getIdentifier(
-                "simple_notification_icon", "drawable", pkgName));
-        PushManager.setNotificationBuilder(this, 1, cBuilder);
-    }
 }

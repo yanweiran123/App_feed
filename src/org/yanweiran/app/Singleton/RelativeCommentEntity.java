@@ -12,8 +12,14 @@ public class RelativeCommentEntity  {
     private String    commContent;
     private String    commWhat;
     private String    tid;
+    private String rid;
     private  int tag;
+    private int ismy;
 
+
+    public void setRid(String rid){
+        this.rid = rid;
+    }
     public void setTid(String tid){
         this.tid = tid;
     }
@@ -32,7 +38,9 @@ public class RelativeCommentEntity  {
     public void setTag(int tag){
         this.tag=tag;
     }
-
+    public void setIsmy(int ismy){
+        this.ismy = ismy;
+    }
     public  void  setCommContent(String commContent)
     {
         this.commContent = commContent;
@@ -67,5 +75,10 @@ public class RelativeCommentEntity  {
     public int getTag(){
         return  tag;
     }
-
+    public int getIsmy(){
+        return ismy;
+    }
+    public  String getRid(){
+        return  rid;
+    }
 }

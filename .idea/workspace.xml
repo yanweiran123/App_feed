@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidConfiguredLogFilters">
+    <filters>
+      <filter>
+        <option name="logLevel" value="verbose" />
+        <option name="logMessagePattern" value="文件不存在" />
+        <option name="logTagPattern" value="" />
+        <option name="name" value="Unnamed-0" />
+        <option name="packageNamePattern" value="" />
+        <option name="pid" value="" />
+      </filter>
+    </filters>
+  </component>
   <component name="AndroidLayoutPreviewToolWindow">
     <option name="state">
       <GlobalState>
@@ -14,75 +26,123 @@
       </config>
     </shared>
     <layouts>
-      <layout url="file://$PROJECT_DIR$/res/layout-normal/afterlogin_student.xml">
+      <layout url="file://$PROJECT_DIR$/res/layout-sw360dp/chat.xml">
         <config>
-          <device>Galaxy Nexus</device>
-          <theme>@android:style/Theme.Holo</theme>
+          <device>Nexus 7</device>
+          <theme>@android:style/Theme.Black.NoTitleBar</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/res/layout-normal/afterlogin_teacher.xml">
+      <layout url="file://$PROJECT_DIR$/res/layout-sw360dp/tweet_detail.xml">
         <config>
           <device>Nexus 4</device>
-          <theme>@android:style/Theme.NoTitleBar</theme>
+          <theme>@android:style/Theme.Black.NoTitleBar</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/res/layout-normal/fresh_one_comment.xml">
+      <layout url="file://$PROJECT_DIR$/res/layout/chat.xml">
+        <config>
+          <device>Galaxy Nexus</device>
+          <theme>@android:style/Theme.Black.NoTitleBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/res/layout/chat_selector.xml">
+        <config>
+          <device>4.65in 720p (Galaxy Nexus)</device>
+          <theme>@android:style/Theme.Black.NoTitleBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/res/layout/comment.xml">
+        <config>
+          <device>Nexus One</device>
+          <theme>@android:style/Theme.Black.NoTitleBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/res/layout/comment_cell.xml">
         <config>
           <device>2.7in QVGA</device>
           <theme>@android:style/Theme.NoTitleBar</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/res/layout-normal/indicent_single.xml">
+      <layout url="file://$PROJECT_DIR$/res/layout/individual_center.xml">
         <config>
           <device>Nexus 4</device>
-          <theme>@android:style/Theme.Holo</theme>
+          <theme>@android:style/Theme.Black.NoTitleBar</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/res/layout-normal/individual_center.xml">
+      <layout url="file://$PROJECT_DIR$/res/layout/individual_center2.xml">
         <config>
           <device>Nexus 4</device>
           <theme>@android:style/Theme.NoTitleBar</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/res/layout-normal/main.xml">
+      <layout url="file://$PROJECT_DIR$/res/layout/loging.xml">
         <config>
-          <device>3.7in WVGA (Nexus One)</device>
+          <device>Nexus S</device>
           <theme>@android:style/Theme</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/res/layout-normal/messagebox.xml">
+      <layout url="file://$PROJECT_DIR$/res/layout/main.xml">
         <config>
-          <device>Nexus 7 2013</device>
+          <device>Galaxy Nexus</device>
+          <theme>@android:style/Theme.Black.NoTitleBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/res/layout/msgbox.xml">
+        <config>
+          <device>Nexus One</device>
           <theme>@android:style/Theme.NoTitleBar</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/res/layout-normal/register.xml">
+      <layout url="file://$PROJECT_DIR$/res/layout/notice_tweet.xml">
+        <config>
+          <device>Nexus 4</device>
+          <theme>@android:style/Theme.Holo.NoActionBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/res/layout/register.xml">
         <config>
           <device>Nexus 7 2013</device>
           <theme>@android:style/Theme.Holo</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/res/layout-normal/relativecomment.xml">
+      <layout url="file://$PROJECT_DIR$/res/layout/relativecomment.xml">
         <config>
           <device>Nexus 4</device>
           <theme>@android:style/Theme.NoTitleBar</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/res/layout-normal/teachernotice.xml">
+      <layout url="file://$PROJECT_DIR$/res/layout/teacher_select_class.xml">
         <config>
           <device>Nexus 4</device>
+          <theme>@android:style/Theme.NoTitleBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/res/layout/tile.xml">
+        <config>
+          <device>Galaxy Nexus</device>
           <theme>@android:style/Theme.Holo</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/res/layout-normal/teachernotice_single.xml">
+      <layout url="file://$PROJECT_DIR$/res/layout/title_cell.xml">
+        <config>
+          <device>Galaxy Nexus</device>
+          <theme>@android:style/Theme.Black.NoTitleBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/res/layout/tweet_cell.xml">
         <config>
           <device>Nexus 4</device>
           <theme>@android:style/Theme.NoTitleBar</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/res/layout-normal/week_arrange.xml">
+      <layout url="file://$PROJECT_DIR$/res/layout/week_info.xml">
         <config>
           <device>Nexus 7 2013</device>
+          <theme>@android:style/Theme.NoTitleBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/res/layout/week_recipe_detail.xml">
+        <config>
+          <device>3.2in QVGA (ADP2)</device>
           <theme>@android:style/Theme.NoTitleBar</theme>
         </config>
       </layout>
@@ -102,6 +162,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="Commander">
+    <leftPanel />
+    <rightPanel />
+    <splitter proportion="0.5" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -146,7 +211,72 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/ChatPrivate.java" line="217" class="org.yanweiran.app.activity.ChatPrivate" package="org.yanweiran.app.activity">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/Tweet.java" line="80" class="org.yanweiran.app.activity.Tweet" package="org.yanweiran.app.activity">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/BigPhoto.java" line="146" class="org.yanweiran.app.activity.BigPhoto" package="org.yanweiran.app.activity">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
+    <method_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/ChatPrivate.java" line="741" class="org.yanweiran.app.activity.ChatPrivate" package="org.yanweiran.app.activity">
+        <option name="WATCH_ENTRY" value="true" />
+        <option name="WATCH_EXIT" value="true" />
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </method_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -156,45 +286,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="WeekArrangeFragmentAdapter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/myadpter/WeekArrangeFragmentAdapter.java">
+      <file leaf-file-name="MessageBox.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/MessageBox.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="25" selection-start="680" selection-end="680" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1000">
+            <state line="74" column="4" selection-start="2739" selection-end="2905" vertical-scroll-proportion="0.0" vertical-offset="1850" max-vertical-offset="6075">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="week_arrange_listview.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout-normal/week_arrange_listview.xml">
+      <file leaf-file-name="RecentTalkAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/adapter/RecentTalkAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="35" selection-start="458" selection-end="458" vertical-scroll-proportion="-10.038462" vertical-offset="14" max-vertical-offset="575">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WeekArrangeFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/fragment/WeekArrangeFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="20" selection-start="1746" selection-end="1767" vertical-scroll-proportion="0.0" vertical-offset="613" max-vertical-offset="1325">
+            <state line="128" column="32" selection-start="4389" selection-end="4389" vertical-scroll-proportion="0.0" vertical-offset="2165" max-vertical-offset="3125">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="week_arrange_detail.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/res/layout-normal/week_arrange_detail.xml">
-          <provider editor-type-id="text-editor">
-            <state line="10" column="32" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0" vertical-offset="125" max-vertical-offset="1200">
+      <file leaf-file-name="Tile.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/Tile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="216" column="44" selection-start="9642" selection-end="9663" vertical-scroll-proportion="0.0" vertical-offset="3750" max-vertical-offset="8675">
               <folding />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
+        </entry>
+      </file>
+      <file leaf-file-name="TileAdapter.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/adapter/TileAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="67" column="0" selection-start="1885" selection-end="1885" vertical-scroll-proportion="0.44483986" vertical-offset="1125" max-vertical-offset="1800">
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -215,59 +339,62 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/layout-normal/talkcontent.xml" />
-        <option value="$PROJECT_DIR$/src/org/yanweiran/app/activity/MessageSingle.java" />
-        <option value="$PROJECT_DIR$/res/layout-normal/chatleft.xml" />
-        <option value="$PROJECT_DIR$/res/layout-normal/chatright.xml" />
-        <option value="$PROJECT_DIR$/src/org/yanweiran/app/chatadapter/ChatMsgViewAdapter.java" />
-        <option value="$PROJECT_DIR$/res/drawable-xhdpi/comment.xml" />
-        <option value="$PROJECT_DIR$/res/drawable-mdpi/comment.xml" />
-        <option value="$PROJECT_DIR$/res/drawable-ldpi/comment.xml" />
-        <option value="$PROJECT_DIR$/res/drawable-hdpi/comment.xml" />
-        <option value="$PROJECT_DIR$/res/values-small/attrs.xml" />
-        <option value="$PROJECT_DIR$/res/values-xlarge/attrs.xml" />
-        <option value="$PROJECT_DIR$/res/values-large/attrs.xml" />
-        <option value="$PROJECT_DIR$/src/org/yanweiran/app/myadpter/RoundImageView.java" />
-        <option value="$PROJECT_DIR$/res/values-normal/attrs.xml" />
-        <option value="$PROJECT_DIR$/res/drawable-xhdpi/head_img.xml" />
-        <option value="$PROJECT_DIR$/res/drawable-hdpi/head_img.xml" />
-        <option value="$PROJECT_DIR$/res/drawable-ldpi/head_img.xml" />
-        <option value="$PROJECT_DIR$/res/drawable-mdpi/head_img.xml" />
-        <option value="$PROJECT_DIR$/src/org/yanweiran/app/activity/NoticeDetail.java" />
-        <option value="$PROJECT_DIR$/src/org/yanweiran/app/Singleton/FreshOne.java" />
-        <option value="$PROJECT_DIR$/src/org/yanweiran/app/activity/FreshNews.java" />
-        <option value="$PROJECT_DIR$/res/layout-normal/everynotice.xml" />
-        <option value="$PROJECT_DIR$/res/layout-normal/fresh_one_comment.xml" />
-        <option value="$PROJECT_DIR$/src/org/yanweiran/app/Singleton/FreshOneEntity.java" />
-        <option value="$PROJECT_DIR$/src/org/yanweiran/app/myadpter/FreshOneNewsComment.java" />
-        <option value="$PROJECT_DIR$/res/layout-normal/fresh_detail.xml" />
-        <option value="$PROJECT_DIR$/src/org/yanweiran/app/activity/FreshNewsOne.java" />
-        <option value="$PROJECT_DIR$/src/org/yanweiran/app/activity/TeacherNotice.java" />
-        <option value="$PROJECT_DIR$/res/drawable-hdpi/btn_rename.xml" />
-        <option value="$PROJECT_DIR$/res/layout-normal/teachernotice_single.xml" />
-        <option value="$PROJECT_DIR$/res/drawable-hdpi/rename.xml" />
-        <option value="$PROJECT_DIR$/res/layout-normal/individual_center.xml" />
-        <option value="$PROJECT_DIR$/src/org/yanweiran/app/activity/IndividualCenter.java" />
+        <option value="$PROJECT_DIR$/res/layout/msgbox.xml" />
+        <option value="$PROJECT_DIR$/res/layout/photo_cell.xml" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/baidupush/MyPushMessageReceiver.java" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/activity/DemoApplication.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/res/layout-normal/week_arrange.xml" />
-        <option value="$PROJECT_DIR$/res/layout-normal/lay2.xml" />
-        <option value="$PROJECT_DIR$/src/org/yanweiran/app/myadpter/WeekArrangeFragmentAdapter.java" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/activity/BigPhoto.java" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/activity/AlbumActivity.java" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/Singleton/NoticeEntity.java" />
+        <option value="$PROJECT_DIR$/res/layout/ill.xml" />
+        <option value="$PROJECT_DIR$/res/layout/tip.xml" />
+        <option value="$PROJECT_DIR$/res/layout/teacher_select_class_cell.xml" />
+        <option value="$PROJECT_DIR$/res/values-normal/colors.xml" />
+        <option value="$PROJECT_DIR$/res/layout/msgbox_cell.xml" />
+        <option value="$PROJECT_DIR$/res/layout/notice_tweet.xml" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/activity/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/res/layout/tweet_cell.xml" />
+        <option value="$PROJECT_DIR$/res/layout/comment_cell.xml" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/adapter/TweetAdapter.java" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/Singleton/NoticeCommentEntity.java" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/Singleton/RelativeCommentEntity.java" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/adapter/RelativeCommentAdapter.java" />
+        <option value="$PROJECT_DIR$/res/layout/relativecomment_cell.xml" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/adapter/NoticeCommentAdapter.java" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/adapter/ChatMsgViewAdapter.java" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/baidupushservice/MyPushMessageReceiver.java" />
+        <option value="$PROJECT_DIR$/res/layout-sw360dp/chat.xml" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/activity/Tile.java" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/activity/Assit.java" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/activity/ChatPrivate.java" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/activity/Comment.java" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/activity/Ill.java" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/activity/ModifyHeadPhoto.java" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/activity/ModifyName.java" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/activity/PublicNews.java" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/activity/RelativeComment.java" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/activity/TeacherNotice.java" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/activity/Tweet.java" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/activity/TweetDetail.java" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/activity/Tip.java" />
         <option value="$PROJECT_DIR$/src/org/yanweiran/app/activity/WeekArrange.java" />
-        <option value="$PROJECT_DIR$/res/drawable-mdpi/yellow_circle.xml" />
-        <option value="$PROJECT_DIR$/res/drawable-xhdpi/yellow_circle.xml" />
-        <option value="$PROJECT_DIR$/res/drawable-hdpi/yellow_circle.xml" />
-        <option value="$PROJECT_DIR$/res/drawable-ldpi/yellow_circle.xml" />
-        <option value="$PROJECT_DIR$/src/org/yanweiran/app/myadpter/NoticeAdapter.java" />
-        <option value="$PROJECT_DIR$/src/org/yanweiran/app/myadpter/WeekArrangeListViewAdapter.java" />
-        <option value="$PROJECT_DIR$/src/org/yanweiran/app/fragment/WeekArrangeFragment.java" />
-        <option value="$PROJECT_DIR$/res/drawable-hdpi/arrange_time.xml" />
-        <option value="$PROJECT_DIR$/res/drawable-ldpi/arrange_time.xml" />
-        <option value="$PROJECT_DIR$/res/drawable-mdpi/arrange_time.xml" />
-        <option value="$PROJECT_DIR$/res/drawable-xhdpi/arrange_time.xml" />
-        <option value="$PROJECT_DIR$/res/layout-normal/week_arrange_listview.xml" />
-        <option value="$PROJECT_DIR$/res/layout-normal/week_arrange_detail.xml" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/activity/WeekRecipe.java" />
+        <option value="$PROJECT_DIR$/res/layout/public_news.xml" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/Singleton/ClassEntity.java" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/activity/Login.java" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/Singleton/PublicType.java" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/Singleton/User.java" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/activity/IndividualCenter.java" />
+        <option value="$PROJECT_DIR$/res/layout/teacher_select_class.xml" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/activity/TeacherSelecClass.java" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/activity/MessageBox.java" />
+        <option value="$PROJECT_DIR$/src/org/yanweiran/app/adapter/RecentTalkAdapter.java" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
@@ -301,8 +428,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -357,29 +482,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="myadpter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppOfFamily" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppOfFamily" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activity" />
+              <option name="myItemId" value="adapter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -394,43 +497,13 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppOfFamily" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppOfFamily" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout-normal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppOfFamily" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppOfFamily" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -450,19 +523,26 @@
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="test1" />
     <property name="SearchEverywhereHistory" value="" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.WIDTH" value="333" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.WIDTH" value="304" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.WIDTH" value="72" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\my_android\AppOfFamily\res\drawable-xhdpi" />
-      <recent name="D:\my_android\AppOfFamily\res\drawable-mdpi" />
-      <recent name="D:\my_android\AppOfFamily\res\drawable-ldpi" />
+      <recent name="D:\my_android\AppOfFamily\libs\armeabi" />
+      <recent name="D:\my_android\AppOfFamily\res\layout-sw360dp" />
+      <recent name="D:\my_android\AppOfFamily\res\layout-small" />
       <recent name="D:\my_android\AppOfFamily\res\layout-normal" />
-      <recent name="D:\my_android\AppOfFamily\libs" />
+      <recent name="D:\my_android\AppOfFamily\src\org\yanweiran\app\activity" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\my_android\AppOfFamily\res\drawable-ldpi" />
+      <recent name="D:\my_android\AppOfFamily\src\org\yanweiran\app\baidupush" />
       <recent name="D:\my_android\AppOfFamily\libs" />
+      <recent name="D:\my_android\AppOfFamily\libs\armeabi" />
+      <recent name="D:\my_android\AppOfFamily\src\org\yanweiran\app\BaiduPush" />
+      <recent name="D:\my_android\AppOfFamily\src\org\yanweiran\app\MyWidget" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.AppOfFamily">
@@ -531,19 +611,6 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -569,6 +636,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -759,64 +839,64 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22180451" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39898133" sideWeight="0.5438067" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49405771" sideWeight="0.47809666" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25075528" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.663837" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49405771" sideWeight="0.5438067" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6808149" sideWeight="0.6404834" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23640484" sideWeight="0.29202038" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25075528" sideWeight="0.50254667" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32597622" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.49405771" sideWeight="0.52190334" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23640484" sideWeight="0.23188406" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6632826" sideWeight="0.35951662" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.60638297" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25075528" sideWeight="0.4974533" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32088286" sideWeight="0.34743202" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="92" y="92" width="1178" height="544" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23338369" sideWeight="0.70628184" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5229202" sideWeight="0.42824772" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="92" y="92" width="1178" height="544" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22180451" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37521222" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="Documentation" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="92" y="92" width="1178" height="544" />
+      <window_info id="Documentation" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="92" y="92" width="1178" height="544" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49405771" sideWeight="0.47809666" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32088286" sideWeight="0.57175225" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25075528" sideWeight="0.50254667" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24848942" sideWeight="0.50254667" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25075528" sideWeight="0.4974533" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32088286" sideWeight="0.34743202" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24773414" sideWeight="0.4974533" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32088286" sideWeight="0.42824772" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22180451" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22180451" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39898133" sideWeight="0.5438067" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25075528" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32597622" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49405771" sideWeight="0.52190334" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4974533" sideWeight="0.32099697" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -837,330 +917,504 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/FreshNews.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/comment_cell.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="70" selection-start="2572" selection-end="2572" vertical-scroll-proportion="0.16757742" vertical-offset="908" max-vertical-offset="2125" />
+        <state line="76" column="32" selection-start="2873" selection-end="2873" vertical-scroll-proportion="0.95335823" vertical-offset="1389" max-vertical-offset="2100" />
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout-normal/msgbox_single.xml">
+    <entry file="file://$PROJECT_DIR$/res/layout/relativecomment_cell.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="36" selection-start="3644" selection-end="3644" vertical-scroll-proportion="0.8395522" vertical-offset="1775" max-vertical-offset="2475" />
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/adapter/RelativeCommentAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="107" column="45" selection-start="3897" selection-end="3897" vertical-scroll-proportion="0.27322406" vertical-offset="2000" max-vertical-offset="3475" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/Singleton/RelativeCommentEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="20" selection-start="1641" selection-end="1641" vertical-scroll-proportion="1.5338079" vertical-offset="213" max-vertical-offset="1300" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/adapter/TweetAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="254" column="17" selection-start="9933" selection-end="9933" vertical-scroll-proportion="0.0" vertical-offset="4976" max-vertical-offset="6050" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/adapter/NoticeCommentAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="171" column="67" selection-start="6764" selection-end="6764" vertical-scroll-proportion="0.6775956" vertical-offset="2903" max-vertical-offset="3900" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/chatphotosend.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.244403" vertical-offset="1739" max-vertical-offset="2275" />
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/chatphotoget.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.0988805" vertical-offset="1125" max-vertical-offset="2250" />
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/chat.xml">
       <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3500" />
       </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/Register.java">
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/adapter/ChatEmojiGridviewAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="0" selection-start="2014" selection-end="2014" vertical-scroll-proportion="-4.960854" vertical-offset="3638" max-vertical-offset="4200" />
+        <state line="17" column="13" selection-start="359" selection-end="359" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1475" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/Singleton/ChatObject.java">
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/adapter/ChatMsgViewAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="149" selection-end="149" vertical-scroll-proportion="-0.08896797" vertical-offset="225" max-vertical-offset="975" />
+        <state line="52" column="44" selection-start="1575" selection-end="1575" vertical-scroll-proportion="0.0" vertical-offset="538" max-vertical-offset="6850" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/RegisterResult.java">
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/MyWidget/ImageTools.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="346" selection-end="346" vertical-scroll-proportion="0.065836295" vertical-offset="138" max-vertical-offset="1000" />
+        <state line="32" column="19" selection-start="908" selection-end="908" vertical-scroll-proportion="0.33274022" vertical-offset="63" max-vertical-offset="9175" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/myadpter/RelativeCommentAdapter.java">
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/adapter/ChatBottomViewPagerAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="21" selection-start="3284" selection-end="3284" vertical-scroll-proportion="2.1857924" vertical-offset="1050" max-vertical-offset="2800" />
+        <state line="11" column="13" selection-start="258" selection-end="258" vertical-scroll-proportion="0.3113879" vertical-offset="0" max-vertical-offset="975" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/Login.java">
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/baidupushservice/MyPushMessageReceiver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="13" selection-start="906" selection-end="906" vertical-scroll-proportion="-1.6448088" vertical-offset="1053" max-vertical-offset="4150" />
+        <state line="134" column="0" selection-start="4322" selection-end="4322" vertical-scroll-proportion="0.0" vertical-offset="3075" max-vertical-offset="6625" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/myadpter/PhotoListAdapter.java">
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/baidupushservice/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="13" selection-start="507" selection-end="507" vertical-scroll-proportion="-1.3205829" vertical-offset="900" max-vertical-offset="2050" />
+        <state line="62" column="5" selection-start="2373" selection-end="2379" vertical-scroll-proportion="0.19928825" vertical-offset="1138" max-vertical-offset="2600">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/Singleton/FreshOneEntity.java">
+    <entry file="file://$PROJECT_DIR$/res/layout-sw360dp/chat.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="25" selection-start="1144" selection-end="1144" vertical-scroll-proportion="0.0" vertical-offset="888" max-vertical-offset="1925" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout-normal/freshnews.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1775" />
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout-normal/fresh_detail.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="59" selection-start="6273" selection-end="6273" vertical-scroll-proportion="-11.0" vertical-offset="3339" max-vertical-offset="3950" />
+        <state line="99" column="0" selection-start="3939" selection-end="3939" vertical-scroll-proportion="0.69962686" vertical-offset="2100" max-vertical-offset="3575" />
       </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/myadpter/FreshOneNewsComment.java">
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/Singleton/UploadUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="31" selection-start="1110" selection-end="1110" vertical-scroll-proportion="-0.7304189" vertical-offset="976" max-vertical-offset="2575" />
+        <state line="17" column="13" selection-start="378" selection-end="378" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2700" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout-normal/fresh_one_comment.xml">
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/Assit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="37" selection-start="1649" selection-end="1649" vertical-scroll-proportion="-39.846153" vertical-offset="39" max-vertical-offset="1475" />
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
+        <state line="124" column="52" selection-start="4666" selection-end="4666" vertical-scroll-proportion="0.75622773" vertical-offset="1450" max-vertical-offset="7050">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout-normal/my_single_comment.xml">
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/ChatPrivate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1925" />
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
+        <state line="296" column="62" selection-start="13558" selection-end="13558" vertical-scroll-proportion="0.6812386" vertical-offset="4351" max-vertical-offset="13000">
+          <folding>
+            <element signature="e#10938#13784#0" expanded="true" />
+            <element signature="e#13761#13762#0" expanded="true" />
+            <element signature="class#BottomItemClickListener#0;class#ChatPrivate#0" expanded="false" />
+            <element signature="class#SendMsgListener#0;class#ChatPrivate#0" expanded="false" />
+            <element signature="class#MyOnClickListener#0;class#ChatPrivate#0" expanded="false" />
+            <element signature="class#SendImgClickListener#0;class#ChatPrivate#0" expanded="false" />
+            <element signature="method#autoUpload#0;class#ChatPrivate#0" expanded="false" />
+            <element signature="class#23479:25277" expanded="false" />
+            <element signature="method#post#0;class#ChatPrivate#0" expanded="false" />
+            <element signature="class#MyThread#0;class#ChatPrivate#0" expanded="false" />
+            <element signature="e#31789#34236#0" expanded="true" />
+            <element signature="e#34217#34218#0" expanded="true" />
+            <element signature="e#34792#36650#0" expanded="true" />
+            <element signature="e#36639#36640#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout-normal/afterlogin_teacher.xml">
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/AwesomeActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.4197761" vertical-offset="225" max-vertical-offset="2475" />
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
+        <state line="29" column="13" selection-start="556" selection-end="556" vertical-scroll-proportion="-4.6708183" vertical-offset="3025" max-vertical-offset="3800">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout-normal/afterlogin_student.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4200" />
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/Comment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="179" column="58" selection-start="7711" selection-end="7711" vertical-scroll-proportion="0.8451957" vertical-offset="2800" max-vertical-offset="4950">
+          <folding />
+        </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="13" selection-start="507" selection-end="507" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="3150">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/Ill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="110" column="58" selection-start="4708" selection-end="4708" vertical-scroll-proportion="0.9089253" vertical-offset="1401" max-vertical-offset="3625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/ForgetPassword.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="13" selection-start="1050" selection-end="1050" vertical-scroll-proportion="0.33333334" vertical-offset="17" max-vertical-offset="3800">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/EditPhoto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="13" selection-start="695" selection-end="695" vertical-scroll-proportion="0.36429873" vertical-offset="0" max-vertical-offset="1375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/DemoApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="13" selection-start="975" selection-end="975" vertical-scroll-proportion="-0.21311475" vertical-offset="342" max-vertical-offset="1450">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/CustomActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="13" selection-start="704" selection-end="704" vertical-scroll-proportion="0.7741348" vertical-offset="0" max-vertical-offset="825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/PublicNews.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="464" column="61" selection-start="20999" selection-end="20999" vertical-scroll-proportion="0.64116573" vertical-offset="6873" max-vertical-offset="9500">
+          <folding>
+            <element signature="method#onActivityResult#0;class#PublicNews#0" expanded="false" />
+            <element signature="method#post#0;class#PublicNews#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/ModifyName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="57" selection-start="3649" selection-end="3649" vertical-scroll-proportion="0.911032" vertical-offset="1088" max-vertical-offset="3600">
+          <folding>
+            <element signature="e#4116#4132#0" expanded="false" />
+            <element signature="e#4397#4413#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/ModifyHeadPhoto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="330" column="32" selection-start="12058" selection-end="12058" vertical-scroll-proportion="0.27322406" vertical-offset="6150" max-vertical-offset="7400">
+          <folding>
+            <element signature="e#9888#10386#0" expanded="true" />
+            <element signature="e#10379#10380#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/TeacherNotice.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="0" selection-start="5156" selection-end="5156" vertical-scroll-proportion="0.40801457" vertical-offset="1676" max-vertical-offset="2275" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/FreshNewsOne.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="49" selection-start="4079" selection-end="4079" vertical-scroll-proportion="0.6357013" vertical-offset="1351" max-vertical-offset="2550" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout-normal/indicent_single.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2650" />
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout-normal/teachernotice.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="900" max-vertical-offset="1775" />
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout-normal/teachernotice_single.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="36" selection-start="2984" selection-end="2984" vertical-scroll-proportion="0.5597015" vertical-offset="1375" max-vertical-offset="3650" />
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/btn_rename.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="8" selection-start="323" selection-end="323" vertical-scroll-proportion="0.40035588" vertical-offset="0" max-vertical-offset="562" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/atlt.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="625" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-xhdpi/rename.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="562" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-mdpi/rename.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="562" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-ldpi/rename.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="562" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/rename.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="48" selection-start="415" selection-end="415" vertical-scroll-proportion="0.48932385" vertical-offset="0" max-vertical-offset="562" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout-normal/individual_center.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="64" selection-start="3478" selection-end="3478" vertical-scroll-proportion="1.0727612" vertical-offset="1350" max-vertical-offset="2750">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/IndividualCenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="41" selection-start="600" selection-end="600" vertical-scroll-proportion="0.5446266" vertical-offset="26" max-vertical-offset="575" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="55" selection-start="2473" selection-end="2529" vertical-scroll-proportion="0.40035588" vertical-offset="1550" max-vertical-offset="2950">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout-normal/week_arrange.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="15" selection-start="1835" selection-end="1835" vertical-scroll-proportion="12.076923" vertical-offset="1614" max-vertical-offset="3125">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-mdpi/yellow_circle.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/myadpter/WeekArrangeListViewAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="31" selection-start="573" selection-end="573" vertical-scroll-proportion="0.0" vertical-offset="838" max-vertical-offset="1975">
+        <state line="440" column="64" selection-start="24044" selection-end="24044" vertical-scroll-proportion="0.81785065" vertical-offset="8551" max-vertical-offset="11850">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#625#626#0" expanded="true" />
-            <element signature="e#652#653#0" expanded="true" />
+            <element signature="e#5078#5121#0" expanded="true" />
+            <element signature="e#15396#19451#0" expanded="true" />
+            <element signature="e#19428#19429#0" expanded="true" />
+            <element signature="e#20030#24405#0" expanded="true" />
+            <element signature="e#24382#24383#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout-normal/talkcontent.xml">
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/RelativeComment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="10" selection-start="1442" selection-end="1637" vertical-scroll-proportion="-10.576923" vertical-offset="750" max-vertical-offset="2075">
+        <state line="114" column="58" selection-start="4966" selection-end="4966" vertical-scroll-proportion="0.86520946" vertical-offset="1300" max-vertical-offset="4575">
+          <folding>
+            <element signature="e#3141#5208#0" expanded="false" />
+            <element signature="e#5197#5198#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/TweetDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="241" column="54" selection-start="10036" selection-end="10267" vertical-scroll-proportion="0.0" vertical-offset="4376" max-vertical-offset="8500">
+          <folding>
+            <element signature="e#8112#10437#0" expanded="true" />
+            <element signature="e#10422#10423#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/Tip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="38" selection-start="4619" selection-end="4619" vertical-scroll-proportion="0.0" vertical-offset="1575" max-vertical-offset="3375">
+          <folding>
+            <element signature="e#5288#5304#0" expanded="false" />
+            <element signature="e#5696#5712#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/Tweet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="440" column="52" selection-start="22506" selection-end="22506" vertical-scroll-proportion="0.0" vertical-offset="5251" max-vertical-offset="11450">
+          <folding>
+            <element signature="e#2946#2989#0" expanded="true" />
+            <element signature="e#13921#18187#0" expanded="true" />
+            <element signature="e#18168#18169#0" expanded="true" />
+            <element signature="e#18720#22831#0" expanded="true" />
+            <element signature="e#22812#22813#0" expanded="true" />
+            <element signature="class#MyOnItemClickListerer#0;class#Tweet#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/TweetNoticeSinglePhoto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="13" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0" vertical-offset="1438" max-vertical-offset="2875">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/public_news.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="17" selection-start="2678" selection-end="2678" vertical-scroll-proportion="0.69962686" vertical-offset="1400" max-vertical-offset="3575" />
       </provider>
       <provider editor-type-id="android-designer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/myadpter/NoticeAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="67" selection-start="2463" selection-end="2463" vertical-scroll-proportion="0.0" vertical-offset="1200" max-vertical-offset="6175">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/WeekArrange.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="29" selection-start="1439" selection-end="1439" vertical-scroll-proportion="0.0" vertical-offset="652" max-vertical-offset="5950">
+        <state line="267" column="31" selection-start="12151" selection-end="12151" vertical-scroll-proportion="1.044484" vertical-offset="4888" max-vertical-offset="10800">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#4993#12351#0" expanded="true" />
+            <element signature="e#12344#12345#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/arrange_time.xml">
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/WeekRecipe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="6" selection-start="386" selection-end="425" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <folding />
+        <state line="360" column="29" selection-start="17660" selection-end="17660" vertical-scroll-proportion="0.5409836" vertical-offset="7603" max-vertical-offset="12700">
+          <folding>
+            <element signature="e#4347#17804#0" expanded="true" />
+            <element signature="e#17785#17786#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-ldpi/yellow_circle.xml">
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/adapter/ClassListviewAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="35" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="400">
-          <folding />
-        </state>
+        <state line="69" column="9" selection-start="1959" selection-end="1959" vertical-scroll-proportion="1.2455516" vertical-offset="750" max-vertical-offset="1975" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-ldpi/arrange_time.xml">
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/Singleton/ClassEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="41" selection-start="421" selection-end="421" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <folding />
-        </state>
+        <state line="38" column="24" selection-start="828" selection-end="828" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="800" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-mdpi/arrange_time.xml">
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/Singleton/PublicType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="41" selection-start="421" selection-end="421" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <folding />
-        </state>
+        <state line="16" column="29" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/yellow_circle.xml">
+    <entry file="file://$PROJECT_DIR$/res/layout/teacher_select_class.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="43" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="400">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-xhdpi/arrange_time.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="41" selection-start="421" selection-end="421" vertical-scroll-proportion="0.44483986" vertical-offset="0" max-vertical-offset="562">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-xhdpi/yellow_circle.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="36" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/fragment/WeekArrangeFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="20" selection-start="1746" selection-end="1767" vertical-scroll-proportion="0.0" vertical-offset="613" max-vertical-offset="1325">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/myadpter/WeekArrangeFragmentAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="25" selection-start="680" selection-end="680" vertical-scroll-proportion="0.0" vertical-offset="451" max-vertical-offset="1100">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout-normal/week_arrange_listview.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="35" selection-start="458" selection-end="458" vertical-scroll-proportion="-10.038462" vertical-offset="14" max-vertical-offset="575">
-          <folding />
-        </state>
+        <state line="39" column="35" selection-start="1675" selection-end="1675" vertical-scroll-proportion="-11.538462" vertical-offset="675" max-vertical-offset="1825" />
       </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout-normal/week_arrange_detail.xml">
-      <provider editor-type-id="text-editor">
-        <state line="10" column="32" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0" vertical-offset="125" max-vertical-offset="1200">
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/Singleton/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="15" selection-start="1031" selection-end="1031" vertical-scroll-proportion="0.0" vertical-offset="638" max-vertical-offset="1275">
+          <folding>
+            <element signature="e#486#499#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/TeacherSelecClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="110" column="44" selection-start="3774" selection-end="3774" vertical-scroll-proportion="0.0" vertical-offset="2025" max-vertical-offset="3250">
+          <folding>
+            <element signature="e#3368#3675#0" expanded="true" />
+            <element signature="e#3664#3665#0" expanded="true" />
+            <element signature="method#onKeyDown#0;class#TeacherSelecClass#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="189" column="41" selection-start="8026" selection-end="8026" vertical-scroll-proportion="0.81785065" vertical-offset="1551" max-vertical-offset="7150">
+          <folding>
+            <element signature="method#initView#0;class#Login#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/IndividualCenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="39" selection-start="3447" selection-end="3447" vertical-scroll-proportion="1.9786477" vertical-offset="113" max-vertical-offset="3400">
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/MessageBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="4" selection-start="2739" selection-end="2905" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="4825">
+          <folding />
+        </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/adapter/RecentTalkAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="128" column="32" selection-start="4389" selection-end="4389" vertical-scroll-proportion="0.0" vertical-offset="2165" max-vertical-offset="3125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/activity/Tile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="216" column="44" selection-start="9642" selection-end="9663" vertical-scroll-proportion="0.0" vertical-offset="3750" max-vertical-offset="8675">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/yanweiran/app/adapter/TileAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="0" selection-start="1885" selection-end="1885" vertical-scroll-proportion="0.44483986" vertical-offset="1125" max-vertical-offset="1800">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Android</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>Android API 16 Platform</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>AppOfFamily</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>Android API 18 Platform</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>android-support-v13</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
 

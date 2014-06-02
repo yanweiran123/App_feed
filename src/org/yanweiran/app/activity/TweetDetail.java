@@ -200,6 +200,7 @@ public class TweetDetail extends Activity {
         IS_ZAN = msgEntity.getIsZan();
         comm = (TextView)findViewById(R.id.noticeComment);
         comm.setText(msgEntity.getReplyNum()+" 评论");
+
     }
 
         public void initComment(){
@@ -212,7 +213,7 @@ public class TweetDetail extends Activity {
                     try{
                         if(jsonObject.getInt("status")==1){
                             dialog.setVisibility(View.GONE);
-                        }
+
                         JSONArray jsonArray =  jsonObject.getJSONArray("lists");
                         int num = jsonArray.length();
                         for(int i = 0;i<num;i++)
@@ -224,13 +225,21 @@ public class TweetDetail extends Activity {
                             noticeCommentEntity.setHeadUrl(jsonArray.getJSONObject(i).getString("headimg"));
                             noticeCommentEntity.setRid(jsonArray.getJSONObject(i).getString("rid"));
                             noticeCommentEntity.setTag(jsonArray.getJSONObject(i).getInt("tag"));
+                            noticeCommentEntity.setIsmy(jsonArray.getJSONObject(i).getInt("ismy"));
+                            noticeCommentEntity.setTid(msgEntity.getTid());
                             noticeCommentEntities.add(noticeCommentEntity);
                         }
-                         mAdapter = new NoticeCommentAdapter(noticeCommentEntities,TweetDetail.this,imageLoader);
+                         mAdapter = new NoticeCommentAdapter(noticeCommentEntities,TweetDetail.this,imageLoader,comm,no_comment);
                          mListView.setAdapter(mAdapter);
                         if(Integer.valueOf(msgEntity.getReplyNum())==0)
                         {
                             no_comment.setVisibility(View.VISIBLE);
+                        }
+                        }else {
+                            Intent intent = new Intent();
+                            intent.setClass(TweetDetail.this,Login.class);
+                            TweetDetail.this.startActivity(intent);
+                            TweetDetail.this.finish();
                         }
                     }
                     catch (JSONException ex)
@@ -302,12 +311,10 @@ public class TweetDetail extends Activity {
     {
         switch (resultCode){
             case 1:
-                int num = Integer.valueOf(msgEntity.getReplyNum());
-                num=num+1;
-                PublicType.getPublicType().TweetComm =Integer.toString(num);
-                comm.setText("评论"+num);
-                PublicType.getPublicType().TweetComm = Integer.toString(num);
-                msgEntity.setReplyNum(Integer.toString(num));
+                PublicType.getPublicType().TweetComm =Integer.toString(noticeCommentEntities.size()+1);
+                comm.setText(noticeCommentEntities.size()+1+" 评论");
+                PublicType.getPublicType().TweetComm = Integer.toString(noticeCommentEntities.size()+1);
+                msgEntity.setReplyNum(Integer.toString(noticeCommentEntities.size()+1));
                 NoticeCommentEntity noticeCommentEntity= (NoticeCommentEntity)data.getSerializableExtra("comment");
                 noticeCommentEntities.add(0,noticeCommentEntity);
                 mAdapter.notifyDataSetChanged();

@@ -161,16 +161,6 @@ public class ModifyHeadPhoto extends Activity {
             switch (requestCode) {
                 case IMAGE_REQUEST_CODE:
                     startPhotoZoom(data.getData());
-//                    String[] proj = {MediaStore.Images.Media.DATA};
-//                    //好像是android多媒体数据库的封装接口，具体的看Android文档
-//                    Cursor cursor = managedQuery(data.getData(), proj, null, null, null);
-//                    //按我个人理解 这个是获得用户选择的图片的索引值
-//                    int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-//                    //将光标移至开头 ，这个很重要，不小心很容易引起越界
-//                    cursor.moveToFirst();
-//                    //最后根据索引值获取图片路径
-//                     filePath  = cursor.getString(column_index);
-//                     DialogUtil.showDialog(ModifyHeadPhoto.this,filePath);
                     break;
                 case CAMERA_REQUEST_CODE:
                     if (Tools.hasSdcard()) {

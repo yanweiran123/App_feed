@@ -97,7 +97,7 @@
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/myFace"
                 android:layout_marginLeft="10dip"
-                android:textCursorDrawable="@color/blue"
+
                 />
             <Button
                 android:id="@+id/btn_send"

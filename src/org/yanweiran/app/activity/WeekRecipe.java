@@ -130,7 +130,7 @@ public class WeekRecipe extends FragmentActivity {
 
                             if (jsonObject.getInt("status")==1){
                                 dialog.dismiss();
-                            }
+
 
                             recipeEntityList1.clear();
                             recipeEntityList2.clear();
@@ -353,9 +353,12 @@ public class WeekRecipe extends FragmentActivity {
                             mViewPager.setCurrentItem(0);
                             mViewPager.setOnPageChangeListener(new MyOnPageChangeListener());
 
-
-
-
+                            }else {
+                                Intent intent = new Intent();
+                                intent.setClass(WeekRecipe.this,Login.class);
+                                WeekRecipe.this.startActivity(intent);
+                                WeekRecipe.this.finish();
+                            }
                         }catch ( JSONException ex)
                         {
 

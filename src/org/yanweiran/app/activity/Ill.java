@@ -93,10 +93,8 @@ public class Ill extends Activity {
                                 try
                                 {
                                     JSONObject jsonObject = new JSONObject(s);
-
                                     if (jsonObject.getInt("status")==1)
                                     {
-
                                         editText.getText().clear();
                                         Toast.makeText(getApplicationContext(), "消息成功发送",
                                                 Toast.LENGTH_SHORT).show();
@@ -105,6 +103,11 @@ public class Ill extends Activity {
                                         Intent intent = new Intent();
                                         intent.putExtras(data);
                                         Ill.this.setResult(1,intent);
+                                        Ill.this.finish();
+                                    }else {
+                                        Intent intent = new Intent();
+                                        intent.setClass(Ill.this,Login.class);
+                                        Ill.this.startActivity(intent);
                                         Ill.this.finish();
                                     }
                                 }catch (JSONException ex)

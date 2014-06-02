@@ -1,7 +1,6 @@
 package org.yanweiran.app.activity;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -26,13 +25,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiscCache;
-import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
-import com.nostra13.universalimageloader.cache.memory.impl.UsingFreqLimitedMemoryCache;
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
-import com.nostra13.universalimageloader.utils.StorageUtils;
 import com.tendcloud.tenddata.TCAgent;
 import com.umeng.analytics.MobclickAgent;
 
@@ -286,7 +279,7 @@ public class Tweet extends Activity{
 
                             String json = gson.toJson(noticeEntities);
                             pref.edit().putString("TweetEntityList", json).commit();
-                            mAdapter = new TweetAdapter(noticeEntities,Tweet.this,imageLoader);
+                            mAdapter = new TweetAdapter(noticeEntities,Tweet.this,imageLoader,pref,"TweetEntityList");
                             mListView.setOnItemClickListener(new MyOnItemClickListerer());
                             mListView.setAdapter(mAdapter);
                         }
@@ -308,7 +301,7 @@ public class Tweet extends Activity{
             Gson gson = new Gson();
             String json = pref.getString("TweetEntityList", "");
             noticeEntities = gson.fromJson(json,new TypeToken<ArrayList<NoticeEntity>>(){}.getType());
-            mAdapter = new TweetAdapter(noticeEntities,Tweet.this,imageLoader);
+            mAdapter = new TweetAdapter(noticeEntities,Tweet.this,imageLoader,pref,"TweetEntityList");
             mListView.setOnItemClickListener(new MyOnItemClickListerer());
             mListView.setAdapter(mAdapter);
         }
@@ -330,7 +323,7 @@ public class Tweet extends Activity{
                                 MAX_ID = jsonObject.getString("maxid");
                                 pref.edit().putString("TweetMaxId",jsonObject.getString("maxid")).commit();
 
-                            }
+
                             SchoolClass.getSchoolClass().messageArray = jsonObject.getJSONArray("lists");
                             arrayClass = SchoolClass.getSchoolClass().messageArray;
                             User.getUser().msgNum = arrayClass.length();
@@ -369,6 +362,12 @@ public class Tweet extends Activity{
                             mAdapter.notifyDataSetChanged();
                             String json = gson.toJson(noticeEntities);
                             pref.edit().putString("TweetEntityList", json).commit();
+                        }else {
+                                Intent intent = new Intent();
+                                intent.setClass(Tweet.this,Login.class);
+                                Tweet.this.startActivity(intent);
+                                Tweet.this.finish();
+                            }
                         }
                         catch (JSONException ex)
                         {
@@ -397,7 +396,7 @@ public class Tweet extends Activity{
                                 myHandler.sendEmptyMessage(LOAD_MORE_SUCCESS);
                                 pref.edit().putString("TweetMinID", jsonObject.getString("minid")).commit();
                                 MIN_ID = jsonObject.getString("minid");
-                            }
+
                             SchoolClass.getSchoolClass().messageArray = jsonObject.getJSONArray("lists");
                             arrayClass = SchoolClass.getSchoolClass().messageArray;
                             User.getUser().msgNum = arrayClass.length();
@@ -435,6 +434,12 @@ public class Tweet extends Activity{
                             }
                             String json = gson.toJson(noticeEntities);
                             pref.edit().putString("TweetEntityList", json).commit();
+                        }else {
+                                Intent intent = new Intent();
+                                intent.setClass(Tweet.this,Login.class);
+                                Tweet.this.startActivity(intent);
+                                Tweet.this.finish();
+                            }
                         }
                         catch (JSONException ex)
                         {

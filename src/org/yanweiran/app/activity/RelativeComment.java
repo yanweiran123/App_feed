@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -85,12 +86,11 @@ public class RelativeComment extends Activity{
             public void onResponse(JSONObject jsonObject) {
 
                 try{
-                    int status = jsonObject.getInt("status");
-                    {
-                        if(status==1){
+
+                        if(jsonObject.getInt("status")==1){
                             dialog.dismiss();
-                        }
-                    }
+
+
                     JSONArray jsonArray = jsonObject.getJSONArray("lists");
                     int num = jsonArray.length();
                     for(int i=0;i<num;i++)
@@ -108,10 +108,16 @@ public class RelativeComment extends Activity{
                     RelativeCommentAdapter mAdapter = new RelativeCommentAdapter(commentEntities,RelativeComment.this,mImageLoader);
                     mListView.setAdapter(mAdapter);
                     mListView.setOnItemClickListener(new MyOnClickListener());
+                }else {
+                            Intent intent = new Intent();
+                            intent.setClass(RelativeComment.this,Login.class);
+                            RelativeComment.this.startActivity(intent);
+                            RelativeComment.this.finish();
+                        }
                 }
                 catch (JSONException ex)
                 {
-
+                    Log.e("exexexexexexexexexexexexexexexexexexexexexexexexexex",ex.toString());
                 }
             }
         },new Response.ErrorListener() {

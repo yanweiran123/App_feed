@@ -73,6 +73,7 @@
         android:background="@color/trans"
         android:src="@drawable/delete"
         android:layout_alignParentRight="true"
+        android:paddingTop="5dp"
         android:visibility="gone"
         />
 </RelativeLayout>

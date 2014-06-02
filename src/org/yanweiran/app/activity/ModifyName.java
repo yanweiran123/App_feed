@@ -82,6 +82,7 @@ public class ModifyName extends Activity {
                     public void onResponse(String s) {
                         try {
                             JSONObject jsonObject= new JSONObject(s);
+                            if(jsonObject.getInt("status")==1){
                             User.getUser().bbname = jsonObject.getString("uname");
                             Toast.makeText(getApplicationContext(), "修改成功！",
                                     Toast.LENGTH_SHORT).show();
@@ -89,6 +90,13 @@ public class ModifyName extends Activity {
                             intent.setClass(ModifyName.this,IndividualCenter.class);
                             ModifyName.this.startActivity(intent);
                             ModifyName.this.finish();
+                            }else {
+                                Intent intent = new Intent();
+                                intent.setClass(ModifyName.this,Login.class);
+                                ModifyName.this.startActivity(intent);
+                                ModifyName.this.finish();
+
+                            }
                         }catch (JSONException ex)
                         {
 

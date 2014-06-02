@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="umeng-sdk-analytics_v5.2.2_update_v2.4.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/umeng-sdk-analytics_v5.2.2_update_v2.4.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

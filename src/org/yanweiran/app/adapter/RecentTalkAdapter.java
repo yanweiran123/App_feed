@@ -15,7 +15,9 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import org.yanweiran.Login.R;
+import org.yanweiran.app.Singleton.PublicType;
 import org.yanweiran.app.Singleton.RecentTalkEntity;
+import org.yanweiran.app.Singleton.User;
 import org.yanweiran.app.activity.MyApplication;
 
 import java.util.ArrayList;
@@ -28,6 +30,7 @@ public class RecentTalkAdapter extends BaseAdapter {
 
     private ArrayList<RecentTalkEntity> recentTalkEntities = new ArrayList<RecentTalkEntity>();
     private Context context;
+
     private ImageLoader imageLoader;
     private DisplayImageOptions mDisplayImageOptions;
     private MyApplication application;
@@ -42,9 +45,9 @@ public class RecentTalkAdapter extends BaseAdapter {
                         .showStubImage(defaultImageId)
                         .showImageForEmptyUri(defaultImageId)
                         .showImageOnFail(defaultImageId)
-                        .cacheInMemory()
-                        .cacheOnDisc()
-                        .resetViewBeforeLoading()
+                        .cacheInMemory(true)
+                        .cacheOnDisc(true)
+                        .resetViewBeforeLoading(true)
                         .build();
 
     }
@@ -97,6 +100,11 @@ public class RecentTalkAdapter extends BaseAdapter {
         if(recentTalkEntity.getStatus()==1){
             viewHolder.readnote.setVisibility(View.VISIBLE);
             viewHolder.readnote2.setVisibility(View.VISIBLE);
+            User.getUser().news++;
+            if(User.getUser().tag.equals("1")){
+                User.getUser().classEntityList.get(PublicType.getPublicType().classPosition).setClassNew(User.getUser().news);
+            }
+
         }else {
             viewHolder.readnote.setVisibility(View.GONE);
             viewHolder.readnote2.setVisibility(View.GONE);
@@ -112,17 +120,7 @@ public class RecentTalkAdapter extends BaseAdapter {
 
 
 
-//        view.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                ChatObject chatObject = new ChatObject();
-//                chatObject.setName(msgName[i]);
-//                chatObject.setFid(fid[i]);
-//                Intent intent = new Intent(context, ChatPrivate.class);
-//                intent.putExtra("talkPerson", chatObject);
-//                context.startActivity(intent);
-//            }
-//        });
+
 
         return  view;
     }

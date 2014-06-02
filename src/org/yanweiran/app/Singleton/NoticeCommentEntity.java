@@ -10,12 +10,13 @@ import java.io.Serializable;
 public class NoticeCommentEntity implements Serializable  {
 
     private String commName;
-    private  int num;
+    private  String tid;
     private String headUrl;
     private String commContent;
     private String  commTime;
     private String rid;
     private int tag;
+    private  int ismy;
 
 
     public void setRid(String rid)
@@ -29,9 +30,9 @@ public class NoticeCommentEntity implements Serializable  {
     {
         this.commName = commName;
     }
-    public void  setNum(int num)
+    public void  setTid(String tid)
     {
-        this.num = num;
+        this.tid = tid;
     }
     public void setHeadUrl(String headUrl)
     {
@@ -45,6 +46,9 @@ public class NoticeCommentEntity implements Serializable  {
     {
         this.commTime =commTime;
     }
+    public  void setIsmy(int ismy){
+        this.ismy = ismy;
+    }
 
     public  String getCommName()
     {
@@ -54,9 +58,9 @@ public class NoticeCommentEntity implements Serializable  {
     {
         return  headUrl;
     }
-    public  int getNum()
+    public  String getTid()
     {
-        return  num;
+        return  tid;
     }
     public  String getCommContent()
     {
@@ -72,5 +76,8 @@ public class NoticeCommentEntity implements Serializable  {
     }
     public  int getTag(){
         return tag;
+    }
+    public  int getIsmy(){
+        return  ismy;
     }
 }

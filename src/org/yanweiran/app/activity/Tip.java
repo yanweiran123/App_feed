@@ -104,6 +104,11 @@ public class Tip extends Activity {
                                         intent.putExtras(data);
                                         Tip.this.setResult(1,intent);
                                         Tip.this.finish();
+                                    }else {
+                                        Intent intent = new Intent();
+                                        intent.setClass(Tip.this,Login.class);
+                                        Tip.this.startActivity(intent);
+                                        Tip.this.finish();
                                     }
                                 }catch (JSONException ex)
                                 {

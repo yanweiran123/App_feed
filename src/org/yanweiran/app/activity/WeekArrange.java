@@ -138,7 +138,7 @@ public class WeekArrange extends FragmentActivity{
 
                 if(jsonObject.getInt("status")==1){
                     dialog.dismiss();
-                }
+
                     tvTitle=(TextView)findViewById(R.id.timeTitle);
                     String title  = jsonObject.getString("title");
                     tvTitle.setText(title);
@@ -261,6 +261,12 @@ public class WeekArrange extends FragmentActivity{
                 mViewPager.setAdapter(new WeekFragmentAdapter(getSupportFragmentManager(), fragmentArrayList));
                 mViewPager.setCurrentItem(0);
                 mViewPager.setOnPageChangeListener(new MyOnPageChangeListener());
+            }else {
+                    Intent intent = new Intent();
+                    intent.setClass(WeekArrange.this,Login.class);
+                    WeekArrange.this.startActivity(intent);
+                    WeekArrange.this.finish();
+                }
             }
             catch (JSONException ex)
             {

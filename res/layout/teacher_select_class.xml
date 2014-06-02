@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:id="@+id/afterlogin"
     android:background="@drawable/background"
-
     >
         <org.yanweiran.app.MyWidget.RoundImageView
             android:id="@+id/headImg"

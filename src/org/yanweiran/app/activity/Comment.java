@@ -163,6 +163,8 @@ public class Comment extends Activity {
                                     noticeCommentEntity.setHeadUrl(commentity.getString("headimg"));
                                     noticeCommentEntity.setRid(commentity.getString("rid"));
                                     noticeCommentEntity.setTag(Integer.valueOf(User.getUser().tag));
+                                    noticeCommentEntity.setIsmy(1);
+                                    noticeCommentEntity.setTid(msgEntity.getTid());
                                     noticeCommentEntities.add(noticeCommentEntity);
                                     Bundle data = new Bundle();
                                     data.putSerializable("comment", noticeCommentEntity);
@@ -170,6 +172,11 @@ public class Comment extends Activity {
                                     intent.putExtras(data);
                                     Comment.this.setResult(1, intent);// 跳转回原来的activit
                                     intent.setClass(Comment.this,TweetDetail.class);
+                                    Comment.this.finish();
+                                }else {
+                                    Intent intent = new Intent();
+                                    intent.setClass(Comment.this,Login.class);
+                                    Comment.this.startActivity(intent);
                                     Comment.this.finish();
                                 }
                             }catch (JSONException ex)

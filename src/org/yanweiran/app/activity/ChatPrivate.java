@@ -263,6 +263,9 @@ public class ChatPrivate extends Activity {
                         {
                             try
                             {
+                                if(jsonObject.getInt("status")==1){
+
+
                                 JSONArray msgArray = jsonObject.getJSONArray("messages");
                                 MAXID = jsonObject.getString("maxid");
                                 MINID = jsonObject.getString("minid");
@@ -283,11 +286,16 @@ public class ChatPrivate extends Activity {
                                     }
                                     chatMsgEntities.add(chatMsgEntity);
                                 }
-
                                     adapter = new ChatMsgViewAdapter(ChatPrivate.this,chatMsgEntities,imageLoader);
                                     mListView.setAdapter(adapter);
                                     mListView.setSelection(chatMsgEntities.size()-1);
                                     new Thread(new MyThread()).start();
+                            }else {
+                                    Intent intent = new Intent();
+                                    intent.setClass(ChatPrivate.this,Login.class);
+                                    ChatPrivate.this.startActivity(intent);
+                                    ChatPrivate.this.finish();
+                                }
                             }
                             catch (JSONException ex)
                             {
@@ -631,25 +639,7 @@ public class ChatPrivate extends Activity {
     {
         if (resultCode != RESULT_CANCELED){
         switch (requestCode){
-//            case 3:
-//                switch (resultCode){
-//                    case 1:
-//                    ChatMsgEntity chatMsgEntity = (ChatMsgEntity)data.getSerializableExtra("msgEntity");
-//                    chatMsgEntities.add(chatMsgEntity);
-//                    adapter.notifyDataSetChanged();
-//                        Log.d("++++++++++++++++++++++++++++",chatMsgEntity.getMsgTag());
-//                        break;
-//                }
-//                break;
-//            case 4:
-//                switch (resultCode){
-//                    case 1:
-//                        ChatMsgEntity chatMsgEntity = (ChatMsgEntity)data.getSerializableExtra("msgEntity");
-//                        chatMsgEntities.add(chatMsgEntity);
-//                        adapter.notifyDataSetChanged();
-//                        break;
-//                }
-//                break;
+
             case IMAGE_REQUEST_CODE:
                 ContentResolver resolver = getContentResolver();
                 //照片的原始资源地址
@@ -695,19 +685,6 @@ public class ChatPrivate extends Activity {
                     }catch (Exception ex){
 
                     }
-//                        Bitmap bitmap = BitmapFactory.decodeFile(Environment.getExternalStorageDirectory() + "/"
-//                                + IMAGE_FILE_NAME);
-//                        Bitmap newBitmap = ImageTools.zoomBitmap(bitmap, bitmap.getWidth() / 10, bitmap.getHeight() / 10);
-//                        bitmap.recycle();
-//                                      //由于Bitmap内存占用较大，这里需要回收内存，否则会报out of memory异常
-//                                      //将处理过的图片显示在界面上，并保存到本地
-//                        ImageTools.savePhotoToSDCard(newBitmap, Environment.getExternalStorageDirectory().getAbsolutePath(), "uploadImage");
-//                        filePath =  Environment.getExternalStorageDirectory().getAbsolutePath()+"/"+"uploadImage.png";
-
-//                    File tempFile = new File(
-//                            Environment.getExternalStorageDirectory()+ "/"
-//                                    + IMAGE_FILE_NAME);
-//                    startPhotoZoom(Uri.fromFile(tempFile));
                 } else {
                     Toast.makeText(ChatPrivate.this, "未找到存储卡，无法存储照片！",
                             Toast.LENGTH_LONG).show();
@@ -748,7 +725,7 @@ public class ChatPrivate extends Activity {
             // TODO Auto-generated method stub
             while (true) {
                 try {
-                    Thread.sleep(3000);// 线程暂停10秒，单位毫秒
+                    Thread.sleep(10000);// 线程暂停10秒，单位毫秒
                     Message message = new Message();
                     message.what = 1;
                     handler1.sendMessage(message);// 发送消息
@@ -774,7 +751,6 @@ public class ChatPrivate extends Activity {
                             if(jsonObject.getInt("status")==1)
                             {
                                 MINID = jsonObject.getString("minid");
-                            }
 
                         JSONArray msgArray = jsonObject.getJSONArray("messages");
                         int num = msgArray.length();
@@ -797,7 +773,13 @@ public class ChatPrivate extends Activity {
                         }
                         adapter.notifyDataSetChanged();
                         mListView.setSelection(mListView.getTop());
-                    }
+                    }else {
+                                Intent intent = new Intent();
+                                intent.setClass(ChatPrivate.this,Login.class);
+                                ChatPrivate.this.startActivity(intent);
+                                ChatPrivate.this.finish();
+                            }
+                   }
                     catch (JSONException ex)
                     {
                         DialogUtil.showDialog(ChatPrivate.this,ex.toString());
@@ -821,8 +803,9 @@ public class ChatPrivate extends Activity {
             @Override
             public void onResponse(JSONObject jsonObject) {
                 try{
-
-                    MAXID = jsonObject.getString("maxid");
+                    String temp = MAXID;
+                    MAXID = jsonObject.optString("maxid",temp);
+                    if(Integer.valueOf(MAXID)>Integer.valueOf(temp)){
                     JSONArray msgArray = jsonObject.getJSONArray("messages");
                     Integer num = msgArray.length();
                     for(int i=0;i<num;i++)
@@ -844,6 +827,7 @@ public class ChatPrivate extends Activity {
                     adapter.notifyDataSetChanged();
                     if(num>0){
                         mListView.setSelectionfoot();
+                    }
                     }
                 }catch (JSONException ex){
                 }

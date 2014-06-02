@@ -231,7 +231,7 @@ public class  TeacherNotice extends Activity
                                     pref.edit().putString("TNoticeMinId", jsonObject.getString("minid")).commit();
                                     MAX_ID = jsonObject.getString("maxid");
                                     MIN_ID = jsonObject.getString("minid");
-                                }
+
                                 SchoolClass.getSchoolClass().messageArray = jsonObject.getJSONArray("lists");
                                 arrayClass = SchoolClass.getSchoolClass().messageArray;
                                 User.getUser().msgNum = arrayClass.length();
@@ -269,12 +269,18 @@ public class  TeacherNotice extends Activity
                                 }
                                 String json = gson.toJson(noticeEntities);
                                 pref.edit().putString("TNoticeEntityList", json).commit();
-                                mAdapter = new TweetAdapter(noticeEntities,TeacherNotice.this,mImageLoader);
+                                mAdapter = new TweetAdapter(noticeEntities,TeacherNotice.this,mImageLoader,pref,"TNoticeEntityList");
                                 mListView.setAdapter(mAdapter);
                                 mListView.setOnItemClickListener(new MyOnItemClickListerer());
                                 if(User.getUser().notifi==1){
                                     pullData();
                                     User.getUser().notifi=0;
+                                    }
+                                }else {
+                                    Intent intent = new Intent();
+                                    intent.setClass(TeacherNotice.this,Login.class);
+                                    TeacherNotice.this.startActivity(intent);
+                                    TeacherNotice.this.finish();
                                 }
                             }
                             catch (JSONException ex)
@@ -294,12 +300,12 @@ public class  TeacherNotice extends Activity
                 Gson gson = new Gson();
                 String json = pref.getString("TNoticeEntityList", "");
                 noticeEntities = gson.fromJson(json,new TypeToken<ArrayList<NoticeEntity>>(){}.getType());
-                mAdapter = new TweetAdapter(noticeEntities,TeacherNotice.this,mImageLoader);
+                mAdapter = new TweetAdapter(noticeEntities,TeacherNotice.this,mImageLoader,pref,"TNoticeEntityList");
                 mListView.setOnItemClickListener(new MyOnItemClickListerer());
                 mListView.setAdapter(mAdapter);
                 if(User.getUser().notifi==1){
                     pullData();
-                    User.getUser().notifi=0;
+                  User.getUser().notifi=0;
                 }
             }
           }
@@ -319,7 +325,7 @@ public class  TeacherNotice extends Activity
                                     myHandler.sendEmptyMessage(LOAD_NEW_INFO);
                                     MAX_ID = jsonObject.getString("maxid");
                                     pref.edit().putString("TNoticeMaxId",jsonObject.getString("maxid")).commit();
-                                }
+
 
                                 SchoolClass.getSchoolClass().messageArray = jsonObject.getJSONArray("lists");
                                 arrayClass = SchoolClass.getSchoolClass().messageArray;
@@ -355,6 +361,12 @@ public class  TeacherNotice extends Activity
                                 }
                                     String json = gson.toJson(noticeEntities);
                                     pref.edit().putString("TNoticeEntityList", json).commit();
+                            }else {
+                                    Intent intent = new Intent();
+                                    intent.setClass(TeacherNotice.this,Login.class);
+                                    TeacherNotice.this.startActivity(intent);
+                                    TeacherNotice.this.finish();
+                                }
                             }
                             catch (JSONException ex)
                             {
@@ -384,7 +396,7 @@ public class  TeacherNotice extends Activity
                                     myHandler.sendEmptyMessage(LOAD_MORE_SUCCESS);
                                     pref.edit().putString("TNoticeMinID", jsonObject.getString("minid")).commit();
                                     MIN_ID = jsonObject.getString("minid");
-                                }
+
                                 SchoolClass.getSchoolClass().messageArray = jsonObject.getJSONArray("lists");
                                 arrayClass = SchoolClass.getSchoolClass().messageArray;
                                 User.getUser().msgNum = arrayClass.length();
@@ -422,6 +434,12 @@ public class  TeacherNotice extends Activity
                                 }
                                 String json = gson.toJson(noticeEntities);
                                 pref.edit().putString("TNoticeEntityList", json).commit();
+                            }else {
+                                    Intent intent = new Intent();
+                                    intent.setClass(TeacherNotice.this,Login.class);
+                                    TeacherNotice.this.startActivity(intent);
+                                    TeacherNotice.this.finish();
+                                }
                             }
                             catch (JSONException ex)
                             {

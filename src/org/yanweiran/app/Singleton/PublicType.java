@@ -14,6 +14,7 @@ public class PublicType  {
     public String TweetZan;
     public int IMG_NUM=0;
     public String TweetComm;
+    public int classPosition;
     private volatile static PublicType publicType;
 
 

@@ -4,7 +4,9 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +24,8 @@ import org.yanweiran.app.Singleton.BaseUrl;
 import org.yanweiran.app.Singleton.NoticeEntity;
 import org.yanweiran.app.Singleton.PublicType;
 import org.yanweiran.app.Singleton.User;
+import org.yanweiran.app.activity.TeacherNotice;
+import org.yanweiran.app.activity.Tweet;
 import org.yanweiran.app.activity.TweetNoticeSinglePhoto;
 ;
 
@@ -31,6 +35,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.gson.Gson;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
@@ -46,16 +51,20 @@ public   class TweetAdapter extends BaseAdapter {
     private Context context;
     private ImageLoader imageLoader;
     private DisplayImageOptions mDisplayImageOptions;
+    private SharedPreferences pref;
+    private String storeName;
 
 
 
 
-    public TweetAdapter(ArrayList<NoticeEntity> noticeArrayList, Context context, ImageLoader imageLoader)
+    public TweetAdapter(ArrayList<NoticeEntity> noticeArrayList, Context context, ImageLoader imageLoader,SharedPreferences pref,String storeName)
     {
         this.noticeArrayList = noticeArrayList;
         this.context=context;
         int defaultImageId = R.drawable.fail;
         this.imageLoader = imageLoader;
+        this.pref = pref;
+        this.storeName = storeName;
         mDisplayImageOptions = new DisplayImageOptions.Builder()
                 .showImageForEmptyUri(defaultImageId)
                 .showImageOnFail(defaultImageId)
@@ -254,19 +263,13 @@ public   class TweetAdapter extends BaseAdapter {
         ,new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject jsonObject) {
-                    try{
-                        if(jsonObject.getInt("succ")==1){
                             Toast.makeText(context.getApplicationContext(), "已删除",
                                     Toast.LENGTH_SHORT).show();
                             noticeArrayList.remove(position);
                             notifyDataSetChanged();
-                        }else {
-                            Toast.makeText(context.getApplicationContext(), "删除失败",
-                                    Toast.LENGTH_SHORT).show();
-                        }
-                    }catch (JSONException ex){
-
-                    }
+                            Gson gson = new Gson();
+                            String json = gson.toJson(noticeArrayList);
+                            pref.edit().putString(storeName, json).commit();
             }
         },new Response.ErrorListener() {
             @Override

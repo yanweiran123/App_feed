@@ -458,6 +458,11 @@ public class PublicNews extends Activity {
                                     photoUrlList.clear();
                                     PublicNews.this.setResult(1, intent);// 跳转回原来的activit
                                     PublicNews.this.finish();
+                                }else {
+                                    Intent intent = new Intent();
+                                    intent.setClass(PublicNews.this,Login.class);
+                                    PublicNews.this.startActivity(intent);
+                                    PublicNews.this.finish();
                                 }
                             }catch (JSONException ex)
                             {

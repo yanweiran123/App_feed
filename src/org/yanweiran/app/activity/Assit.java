@@ -118,6 +118,11 @@ public class Assit extends Activity {
                                 msg.what = 0x123;
                                 msg.obj = jsonObject;
                                 myHandler1.sendMessage(msg);
+                            }else {
+                                Intent intent = new Intent();
+                                intent.setClass(Assit.this,Login.class);
+                                Assit.this.startActivity(intent);
+                                Assit.this.finish();
                             }
                         }catch (JSONException ex){
 

@@ -81,6 +81,7 @@ public class Tile extends Activity {
         initData();
         initView();
         pushMsg();
+
 //        Intent intent = new Intent();
 //        intent .setAction("com.baidu.android.pushservice.action.PUSH_SERVICE");
 //        startService(intent);
@@ -358,7 +359,7 @@ public class Tile extends Activity {
         Gson gson = new Gson();
         String json = pref.getString("TweetEntityList", "");
         ArrayList<NoticeEntity> noticeEntities = gson.fromJson(json,new TypeToken<ArrayList<NoticeEntity>>(){}.getType());
-        Log.e("************************************************",noticeEntities.size()+"");
+
         if(noticeEntities.size()>30){
             for(int i=noticeEntities.size();i>30;i--){
             noticeEntities.remove(i-1);
@@ -367,7 +368,7 @@ public class Tile extends Activity {
         pref.edit().putString("TweetMinID",noticeEntities.get(noticeEntities.size()-1).getTid()).commit();
         pref.edit().putString("TweetEntityList", json).commit();
         }
-         Log.e("************************************************",noticeEntities.size()+"");
+
         }
         pref1 = Tile.this.getSharedPreferences("TeacherNoticeMemory"+User.getUser().classid+User.getUser().email, 0);
        String MAX_ID1 = pref1.getString("TNoticeMaxId","").equals("")?"0":pref.getString("TNoticeMinId","");
@@ -376,12 +377,12 @@ public class Tile extends Activity {
         Gson gson1 = new Gson();
         String json1 = pref1.getString("TNoticeEntityList", "");
         noticeEntities1 = gson1.fromJson(json1,new TypeToken<ArrayList<NoticeEntity>>(){}.getType());
-            Log.e("************************************************",noticeEntities1.size()+"");
+
         if(noticeEntities1.size()>30){
         for(int i=noticeEntities1.size();i>30;i--){
             noticeEntities1.remove(i-1);
         }
-        Log.e("************************************************",noticeEntities1.size()+"");
+
        json1 =gson1.toJson(noticeEntities1);
         pref1.edit().putString("TNoticeMinId",noticeEntities1.get(noticeEntities1.size()-1).getTid()).commit();
         pref1.edit().putString("TNoticeEntityList", json1).commit();

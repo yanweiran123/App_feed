@@ -78,6 +78,7 @@ public class IndividualCenter extends Activity {
                         editor.putString("appid","");
                         editor.putString("channel_id","");
                         editor.commit();
+                        User.destroy();
                         Intent intent = new Intent();
                         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         intent.setClass(IndividualCenter.this,Login.class);

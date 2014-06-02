@@ -50,7 +50,7 @@ public class ChatMsgViewAdapter extends BaseAdapter {
         this.context = context;
         this.chatMsgEntities = chatMsgEntities;
         this.imageLoader = imageLoader;
-        int defaultImageId = R.drawable.indexicon;
+        int defaultImageId = R.drawable.fail;
         mDisplayImageOptions = new DisplayImageOptions.Builder()
                 .showStubImage(defaultImageId)
                 .showImageForEmptyUri(defaultImageId)
